@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/Init.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/Init.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/CAN.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/ADC_ADS863x.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/ADC_ADS868x.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/SPI.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/main.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/MUX1_ADG732.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/variable.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/ADC_ADS863x.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/Accel_ADXL355.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/MAG_MMC5983MA.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/ADC_ADS868x.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/MEM_MT25QL01.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/MAG_MMC5983MA.c</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/SPI.h</file>
+            <file>file:/C:/Users/DanielStPierre/Documents/Project/SAST_Firmware_Test_Board/Accel_ADXL373.c</file>
+        </group>
+    </open-files>
+</project-private>
