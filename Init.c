@@ -572,7 +572,7 @@ void init_timer_1(void)
 //    T1CONbits.TON = 1; // start timer to generate ADC triggers
     
     // FOSC = 20MHz
-    // instruction cycle = FOSC/4 = 12
+    // instruction cycle = FOSC/4 = 5
     // PR1 = 20MHz / 2 / Prescaler / time period 
     // PR1 = 20MHz / 2 / 1 * 1ms = 10000
     // T1CONbits.TCKPS = 3;    // Prescaler  1:256
@@ -582,12 +582,14 @@ void init_timer_1(void)
     T1CONbits.TCS = 0; // clock from peripheral clock
     T1CONbits.TECS = 1; // Set to Tcy (Instruction cycle period)
     T1CONbits.TCKPS = 0; // 1:1 prescale
-    PR1 = 10000; // rollover every X clocks
+    //PR1 = 10000; // rollover every X clocks - 1ms step
+    PR1 = 2000; // rollover every X clocks - 0.2ms step
+    //PR1 = 50000; // rollover every X clocks - 5ms step
     
     IEC0bits.T1IE = 1; // enable interrupt
     IFS0bits.T1IF = 0; // clear flag
     
-    T1CONbits.TON = 1; // start timer to
+    T1CONbits.TON = 1; // start timer to4
     
     
     

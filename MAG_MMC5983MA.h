@@ -28,6 +28,9 @@ void MAG_MMC5983MA_Get_data(void);
 void MAG_MMC5983MA_Write_data_SPI(uint8_t *buffer, uint8_t data_len); 
 uint8_t MAG_MMC5983MA_Get_data_SPI(uint8_t *buffer, uint8_t data_len); 
 
+void MAG_MMC5983MA_Set_Sampling_Continuous(void);
+void MAG_MMC5983MA_Disable_Sampling_Continuous(void);
+
 /*******************************************************************************
  * external Variable and Function declaration
  ******************************************************************************/

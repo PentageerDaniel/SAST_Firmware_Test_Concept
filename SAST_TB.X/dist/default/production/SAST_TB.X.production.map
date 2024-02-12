@@ -142,27 +142,27 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xc5a          0x1287  (4743)
-.const                       0xe5a                0x28            0x3c  (60)
-.dinit                       0xe82              0x4046          0x6069  (24681)
-.text                       0x4ec8              0x6e9c          0xa5ea  (42474)
+.const                       0xe5a                0x2e            0x45  (69)
+.dinit                       0xe88              0x4046          0x6069  (24681)
+.text                       0x4ece              0x6f88          0xa74c  (42828)
 
-                 Total "program" memory used (bytes):        0x11916  (71958) 13%
+                 Total "program" memory used (bytes):        0x11a81  (72321) 13%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0xf000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                       0x1000                   0            0xa6  (166)
-.ndata                      0x10a6                   0             0xa  (10)
-.nbss                       0x10b0                   0             0x4  (4)
-_0000000009CCE0A065b43124    0x10b4                   0          0x3000  (12288)
-_0000000009CCE14065b43124    0x40b4                   0          0x3000  (12288)
-_00000000097985A065b43124    0x70b4                   0           0x800  (2048)
-_000000000956AD2065b3e9b8    0x78b4                   0           0x240  (576)
-.bss                        0x7af4                   0            0x6a  (106)
+.nbss                       0x1000                   0            0xb6  (182)
+.ndata                      0x10b6                   0             0xa  (10)
+.nbss                       0x10c0                   0             0x4  (4)
+_0000000009CD10A065c4ee2b    0x10c4                   0          0x3000  (12288)
+_0000000009CD114065c4ee2b    0x40c4                   0          0x3000  (12288)
+_00000000097CD1E065c4ee2b    0x70c4                   0           0x800  (2048)
+_0000000009414D2065c4ee2b    0x78c4                   0           0x240  (576)
+.bss                        0x7b04                   0            0xba  (186)
 
-                 Total "data" memory used (bytes):         0x6b5e  (27486) 44%
+                 Total "data" memory used (bytes):         0x6bbe  (27582) 44%
 
 
 Dynamic Memory Usage
@@ -170,9 +170,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x7b5e                               0x4a2  (1186)
+stack                       0x7bbe                               0x442  (1090)
 
-                 Maximum dynamic memory (bytes):          0x4a2  (1186)
+                 Maximum dynamic memory (bytes):          0x442  (1090)
 
 
 External Symbols in Data Memory (by address):
@@ -221,95 +221,109 @@ External Symbols in Data Memory (by address):
                     0x1040                  _Time
                     0x1048                  _RTOS_50us_Seguencer
                     0x1049                  _RTOS_50us_Counter
-                    0x104a                  _Burst_To_CAN_Skipper
-                    0x104c                  _Debug_Flags
-                    0x104e                  _Mag_flag
-                    0x104f                  _Accel_unit
-                    0x1050                  _Accel_HG_Flag
-                    0x1051                  _Accel_HG_Sequencer
-                    0x1052                  _Burst_Trigger_Sample_Counter
-                    0x1053                  _ADC_MCP3422_Alt
-                    0x1054                  _Voltage_3V3
-                    0x1056                  _Voltage_5V
-                    0x1058                  _Avg_Voltage_5V_Pointer
-                    0x1059                  _Avg_Voltage_3V3_Pointer
-                    0x105a                  _Sum_Voltage_3V3
-                    0x105c                  _Sum_Voltage_5V
-                    0x105e                  _Avg_Voltage_5V
-                    0x1060                  _Avg_Voltage_3V3
-                    0x1062                  _Volt_5V_Flags
-                    0x1064                  _Volt_3V3_Flags
-                    0x1066                  _Gyro_value
-                    0x1068                  _Gyro_temp
-                    0x106a                  _Gyro_Vol_Ref_Unsigned
-                    0x106c                  _MT25QL01_bytes_pointer
-                    0x1070                  _MT25QL01_Read_bytes_pointer
-                    0x1074                  _MT25QL01_Erase_bytes_pointer
-                    0x1078                  _MT25QL01_Seek_bytes_pointer
-                    0x107c                  _MT25QL01_Seek_bytes_Start_Reference
-                    0x1080                  _MT25QL01_Seek_bytes_End_Reference
-                    0x1084                  _Memory_Search_Sequencer
-                    0x1086                  _MT25QL01_Flag
-                    0x1088                  _Tool_Face_phy_float
-                    0x108c                  _Tool_Face_Old_float
-                    0x1090                  _Tool_Face_Int32
-                    0x1094                  _Tool_Face_Old_Int32
-                    0x1098                  _NumberEventSaved
-                    0x109a                  _EventPointerBuffer
-                    0x109c                  _EventPointerWriting
-                    0x109e                  _MEM_CY15B064J_Write_bytes_pointer
-                    0x10a0                  _MEM_CY15B064J_Read_bytes_pointer
-                    0x10a2                  _MEM_CY15B064J_Seek_bytes_pointer
-                    0x10a4                  _MEM_CY15B064J_Flag
-                    0x10a6                  _MT25QL01_In_Used
-                    0x10a7                  _MT25QL01_Read_In_Used
-                    0x10a8                  _MT25QL01_Erase_In_Used
-                    0x10a9                  _MT25QL01_To_Erase
-                    0x10aa                  _MT25QL01_Seek_In_Used
-                    0x10ab                  _MEM_CY15B064J_Write_In_Used
-                    0x10ac                  _MEM_CY15B064J_Read_In_Used
-                    0x10ad                  _MEM_CY15B064J_Erase_In_Used
-                    0x10ae                  _MEM_CY15B064J_Seek_In_Used
-                    0x10b0                  _Accel_Flag
-                    0x10b4                  _Buffer_RAM_Before
-                    0x40b4                  _Buffer_RAM_After
-                    0x70b4                  _MemoryEventBuffer
-                    0x78b4                  _CanTxBuffer
-                    0x7af4                  _Buffer_Burst
-                    0x7b04                  _Uart_1_data_buffer
-                    0x7b14                  _Uart_1_data_Received
-                    0x7b24                  _State_Flags
-                    0x7b27                  _Magneto_Data
-                    0x7b2e                  _Accel_LG1_Data
-                    0x7b39                  _Accel_LG2_Data
-                    0x7b44                  _Accel_LG3_Data
-                    0x7b50                  _Burst_Flag
-                    0x7b52                  _Accel_HG_Max_Peak
-                    0x7b57                  _Accel_HG_Data
-                    0x7b5c                  ___errno_val
+                    0x104a                  _RTOS_Old_Value
+                    0x104c                  _RTOS_New_Value
+                    0x104e                  _RTOS_Time_Over
+                    0x1050                  _RTOS_Time_Under
+                    0x1052                  _Time_debug_Flag
+                    0x1053                  _Time_debug_counter
+                    0x1054                  _Burst_To_CAN_Skipper
+                    0x1056                  _Debug_Flags
+                    0x1058                  _Mag_flag
+                    0x1059                  _Accel_unit
+                    0x105a                  _Accel_HG_Flag
+                    0x105b                  _Accel_HG_Sequencer
+                    0x105c                  _Burst_Trigger_Sample_Counter
+                    0x105d                  _ADC_MCP3422_Alt
+                    0x105e                  _Voltage_3V3
+                    0x1060                  _Voltage_5V
+                    0x1062                  _Avg_Voltage_5V_Pointer
+                    0x1063                  _Avg_Voltage_3V3_Pointer
+                    0x1064                  _Sum_Voltage_3V3
+                    0x1066                  _Sum_Voltage_5V
+                    0x1068                  _Avg_Voltage_5V
+                    0x106a                  _Avg_Voltage_3V3
+                    0x106c                  _Volt_5V_Flags
+                    0x106e                  _Volt_3V3_Flags
+                    0x1070                  _Gyro_value
+                    0x1072                  _Gyro_temp
+                    0x1074                  _Gyro_Vol_Ref_Unsigned
+                    0x1076                  _MT25QL01_bytes_pointer
+                    0x107a                  _MT25QL01_Read_bytes_pointer
+                    0x107e                  _MT25QL01_Erase_bytes_pointer
+                    0x1082                  _MT25QL01_Seek_bytes_pointer
+                    0x1086                  _MT25QL01_Seek_bytes_Start_Reference
+                    0x108a                  _MT25QL01_Seek_bytes_End_Reference
+                    0x108e                  _Memory_Search_Sequencer
+                    0x1090                  _MT25QL01_Flag
+                    0x1092                  _Tool_Face_phy_float
+                    0x1096                  _Tool_Face_Old_float
+                    0x109a                  _Tool_Face_Int32
+                    0x109e                  _Tool_Face_Old_Int32
+                    0x10a2                  _Mag_Rotation_Det_Flags
+                    0x10a3                  _Mag_Rotation_Det_Array_Pointer
+                    0x10a4                  _Mag_Rotation_Det_Array_Error_Count
+                    0x10a5                  _Mag_Rotation_Det_Timeout_Counter
+                    0x10a6                  _Mag_Rotation_Det_Sample_UP_Counter
+                    0x10a7                  _Mag_Rotation_Det_Sample_Down_Counter
+                    0x10a8                  _Mag_Rotation_Det_Peak_Counter
+                    0x10a9                  _NumberEventSaved
+                    0x10aa                  _EventPointerBuffer
+                    0x10ac                  _EventPointerWriting
+                    0x10ae                  _MEM_CY15B064J_Write_bytes_pointer
+                    0x10b0                  _MEM_CY15B064J_Read_bytes_pointer
+                    0x10b2                  _MEM_CY15B064J_Seek_bytes_pointer
+                    0x10b4                  _MEM_CY15B064J_Flag
+                    0x10b6                  _MT25QL01_In_Used
+                    0x10b7                  _MT25QL01_Read_In_Used
+                    0x10b8                  _MT25QL01_Erase_In_Used
+                    0x10b9                  _MT25QL01_To_Erase
+                    0x10ba                  _MT25QL01_Seek_In_Used
+                    0x10bb                  _MEM_CY15B064J_Write_In_Used
+                    0x10bc                  _MEM_CY15B064J_Read_In_Used
+                    0x10bd                  _MEM_CY15B064J_Erase_In_Used
+                    0x10be                  _MEM_CY15B064J_Seek_In_Used
+                    0x10c0                  _Accel_Flag
+                    0x10c4                  _Buffer_RAM_Before
+                    0x40c4                  _Buffer_RAM_After
+                    0x70c4                  _MemoryEventBuffer
+                    0x78c4                  _CanTxBuffer
+                    0x7b04                  _Buffer_Burst
+                    0x7b14                  _Uart_1_data_buffer
+                    0x7b24                  _Uart_1_data_Received
+                    0x7b34                  _State_Flags
+                    0x7b37                  _Magneto_Data
+                    0x7b3e                  _Accel_LG1_Data
+                    0x7b49                  _Accel_LG2_Data
+                    0x7b54                  _Accel_LG3_Data
+                    0x7b60                  _Burst_Flag
+                    0x7b62                  _Accel_HG_Max_Peak
+                    0x7b67                  _Accel_HG_Data
+                    0x7b6c                  _Mag_Rotation_Det_Array
+                    0x7bbc                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x1053                  _ADC_MCP3422_Alt
+                    0x105d                  _ADC_MCP3422_Alt
                     0x1038                  _ADC_MCP3422_Sequencer
-                    0x10b0                  _Accel_Flag
-                    0x7b57                  _Accel_HG_Data
-                    0x1050                  _Accel_HG_Flag
-                    0x7b52                  _Accel_HG_Max_Peak
-                    0x1051                  _Accel_HG_Sequencer
-                    0x7b2e                  _Accel_LG1_Data
-                    0x7b39                  _Accel_LG2_Data
-                    0x7b44                  _Accel_LG3_Data
-                    0x104f                  _Accel_unit
-                    0x1060                  _Avg_Voltage_3V3
-                    0x1059                  _Avg_Voltage_3V3_Pointer
-                    0x105e                  _Avg_Voltage_5V
-                    0x1058                  _Avg_Voltage_5V_Pointer
+                    0x10c0                  _Accel_Flag
+                    0x7b67                  _Accel_HG_Data
+                    0x105a                  _Accel_HG_Flag
+                    0x7b62                  _Accel_HG_Max_Peak
+                    0x105b                  _Accel_HG_Sequencer
+                    0x7b3e                  _Accel_LG1_Data
+                    0x7b49                  _Accel_LG2_Data
+                    0x7b54                  _Accel_LG3_Data
+                    0x1059                  _Accel_unit
+                    0x106a                  _Avg_Voltage_3V3
+                    0x1063                  _Avg_Voltage_3V3_Pointer
+                    0x1068                  _Avg_Voltage_5V
+                    0x1062                  _Avg_Voltage_5V_Pointer
                     0x1016                  _Boot_Timeout_counter
-                    0x7af4                  _Buffer_Burst
-                    0x40b4                  _Buffer_RAM_After
+                    0x7b04                  _Buffer_Burst
+                    0x40c4                  _Buffer_RAM_After
                     0x1020                  _Buffer_RAM_After_Pointer
-                    0x10b4                  _Buffer_RAM_Before
+                    0x10c4                  _Buffer_RAM_Before
                     0x101e                  _Buffer_RAM_Before_Pointer
                     0x1026                  _Buffer_Read_Pointer
                     0x1024                  _Buffer_Write_After_Pointer
@@ -318,64 +332,78 @@ External Symbols in Data Memory (by name):
                     0x1032                  _BurstBuffer256_Before_Pointer
                     0x1029                  _Burst_After_Pointer
                     0x1028                  _Burst_Before_Pointer
-                    0x7b50                  _Burst_Flag
+                    0x7b60                  _Burst_Flag
                     0x102a                  _Burst_Pause_Delay_counter
                     0x1036                  _Burst_Sequencer
-                    0x104a                  _Burst_To_CAN_Skipper
-                    0x1052                  _Burst_Trigger_Sample_Counter
-                    0x78b4                  _CanTxBuffer
-                    0x104c                  _Debug_Flags
+                    0x1054                  _Burst_To_CAN_Skipper
+                    0x105c                  _Burst_Trigger_Sample_Counter
+                    0x78c4                  _CanTxBuffer
+                    0x1056                  _Debug_Flags
                     0x1039                  _Drill_Pointer
-                    0x109a                  _EventPointerBuffer
-                    0x109c                  _EventPointerWriting
+                    0x10aa                  _EventPointerBuffer
+                    0x10ac                  _EventPointerWriting
                     0x101b                  _Go_To_Sleep_counter
-                    0x106a                  _Gyro_Vol_Ref_Unsigned
-                    0x1068                  _Gyro_temp
-                    0x1066                  _Gyro_value
+                    0x1074                  _Gyro_Vol_Ref_Unsigned
+                    0x1072                  _Gyro_temp
+                    0x1070                  _Gyro_value
                     0x1014                  _Heartbeat_counter
                     0x1010                  _I2C_Errors_Counter
                     0x100e                  _I2C_Errors_Flags
                     0x101a                  _Init_Flag
                     0x1019                  _Init_counter
-                    0x10ad                  _MEM_CY15B064J_Erase_In_Used
-                    0x10a4                  _MEM_CY15B064J_Flag
-                    0x10ac                  _MEM_CY15B064J_Read_In_Used
-                    0x10a0                  _MEM_CY15B064J_Read_bytes_pointer
-                    0x10ae                  _MEM_CY15B064J_Seek_In_Used
-                    0x10a2                  _MEM_CY15B064J_Seek_bytes_pointer
-                    0x10ab                  _MEM_CY15B064J_Write_In_Used
-                    0x109e                  _MEM_CY15B064J_Write_bytes_pointer
-                    0x10a8                  _MT25QL01_Erase_In_Used
-                    0x1074                  _MT25QL01_Erase_bytes_pointer
-                    0x1086                  _MT25QL01_Flag
-                    0x10a6                  _MT25QL01_In_Used
-                    0x10a7                  _MT25QL01_Read_In_Used
-                    0x1070                  _MT25QL01_Read_bytes_pointer
-                    0x10aa                  _MT25QL01_Seek_In_Used
-                    0x1080                  _MT25QL01_Seek_bytes_End_Reference
-                    0x107c                  _MT25QL01_Seek_bytes_Start_Reference
-                    0x1078                  _MT25QL01_Seek_bytes_pointer
-                    0x10a9                  _MT25QL01_To_Erase
-                    0x106c                  _MT25QL01_bytes_pointer
-                    0x104e                  _Mag_flag
-                    0x7b27                  _Magneto_Data
-                    0x70b4                  _MemoryEventBuffer
-                    0x1084                  _Memory_Search_Sequencer
-                    0x1098                  _NumberEventSaved
+                    0x10bd                  _MEM_CY15B064J_Erase_In_Used
+                    0x10b4                  _MEM_CY15B064J_Flag
+                    0x10bc                  _MEM_CY15B064J_Read_In_Used
+                    0x10b0                  _MEM_CY15B064J_Read_bytes_pointer
+                    0x10be                  _MEM_CY15B064J_Seek_In_Used
+                    0x10b2                  _MEM_CY15B064J_Seek_bytes_pointer
+                    0x10bb                  _MEM_CY15B064J_Write_In_Used
+                    0x10ae                  _MEM_CY15B064J_Write_bytes_pointer
+                    0x10b8                  _MT25QL01_Erase_In_Used
+                    0x107e                  _MT25QL01_Erase_bytes_pointer
+                    0x1090                  _MT25QL01_Flag
+                    0x10b6                  _MT25QL01_In_Used
+                    0x10b7                  _MT25QL01_Read_In_Used
+                    0x107a                  _MT25QL01_Read_bytes_pointer
+                    0x10ba                  _MT25QL01_Seek_In_Used
+                    0x108a                  _MT25QL01_Seek_bytes_End_Reference
+                    0x1086                  _MT25QL01_Seek_bytes_Start_Reference
+                    0x1082                  _MT25QL01_Seek_bytes_pointer
+                    0x10b9                  _MT25QL01_To_Erase
+                    0x1076                  _MT25QL01_bytes_pointer
+                    0x7b6c                  _Mag_Rotation_Det_Array
+                    0x10a4                  _Mag_Rotation_Det_Array_Error_Count
+                    0x10a3                  _Mag_Rotation_Det_Array_Pointer
+                    0x10a2                  _Mag_Rotation_Det_Flags
+                    0x10a8                  _Mag_Rotation_Det_Peak_Counter
+                    0x10a7                  _Mag_Rotation_Det_Sample_Down_Counter
+                    0x10a6                  _Mag_Rotation_Det_Sample_UP_Counter
+                    0x10a5                  _Mag_Rotation_Det_Timeout_Counter
+                    0x1058                  _Mag_flag
+                    0x7b37                  _Magneto_Data
+                    0x70c4                  _MemoryEventBuffer
+                    0x108e                  _Memory_Search_Sequencer
+                    0x10a9                  _NumberEventSaved
                     0x1000                  _Pointer_Block_Flash_test
                     0x1002                  _Pointer_Entire_Flash_test
                     0x1049                  _RTOS_50us_Counter
                     0x1048                  _RTOS_50us_Seguencer
+                    0x104c                  _RTOS_New_Value
+                    0x104a                  _RTOS_Old_Value
+                    0x104e                  _RTOS_Time_Over
+                    0x1050                  _RTOS_Time_Under
                     0x1037                  _Sequencer
-                    0x7b24                  _State_Flags
-                    0x105a                  _Sum_Voltage_3V3
-                    0x105c                  _Sum_Voltage_5V
+                    0x7b34                  _State_Flags
+                    0x1064                  _Sum_Voltage_3V3
+                    0x1066                  _Sum_Voltage_5V
                     0x1030                  _TestRAM_Pointer
                     0x102e                  _Test_BufferRAM_Pointer
                     0x1040                  _Time
                     0x103e                  _TimeFlag
                     0x1018                  _Time_Stamp_Timeout_counter
                     0x1017                  _Time_Sync_Timeout_counter
+                    0x1052                  _Time_debug_Flag
+                    0x1053                  _Time_debug_counter
                     0x1006                  _TimerCounter100us
                     0x100d                  _TimerCounter1m
                     0x100a                  _TimerCounter1ms
@@ -384,20 +412,20 @@ External Symbols in Data Memory (by name):
                     0x100b                  _TimerCounter250ms
                     0x1008                  _TimerCounter250us
                     0x1009                  _TimerCounter400us
-                    0x1090                  _Tool_Face_Int32
-                    0x1094                  _Tool_Face_Old_Int32
-                    0x108c                  _Tool_Face_Old_float
-                    0x1088                  _Tool_Face_phy_float
+                    0x109a                  _Tool_Face_Int32
+                    0x109e                  _Tool_Face_Old_Int32
+                    0x1096                  _Tool_Face_Old_float
+                    0x1092                  _Tool_Face_phy_float
                     0x103c                  _Uart_1_Status
-                    0x7b14                  _Uart_1_data_Received
-                    0x7b04                  _Uart_1_data_buffer
+                    0x7b24                  _Uart_1_data_Received
+                    0x7b14                  _Uart_1_data_buffer
                     0x103a                  _Uart_1_data_pointer
                     0x103d                  _Uart_1_data_timeout_counter
-                    0x1064                  _Volt_3V3_Flags
-                    0x1062                  _Volt_5V_Flags
-                    0x1054                  _Voltage_3V3
-                    0x1056                  _Voltage_5V
-                    0x7b5c                  ___errno_val
+                    0x106e                  _Volt_3V3_Flags
+                    0x106c                  _Volt_5V_Flags
+                    0x105e                  _Voltage_3V3
+                    0x1060                  _Voltage_5V
+                    0x7bbc                  ___errno_val
                     0x101c                  _debug_LED_counter
                     0x1015                  _test_Xtall
 
@@ -422,12 +450,12 @@ External Symbols in Program Memory (by address):
                   0x000516                  ___fixsfsi
                   0x000558                  ___floatsisf
                   0x00055e                  __funpack
-                  0x000588                  ___subsf3
                   0x000588                  ___subsf3x
-                  0x00059a                  ___addsf3x
+                  0x000588                  ___subsf3
                   0x00059a                  ___addsf3
-                  0x000764                  ___mulsf3x
+                  0x00059a                  ___addsf3x
                   0x000764                  ___mulsf3
+                  0x000764                  ___mulsf3x
                   0x000870                  __dnrmpackf
                   0x0008c4                  __unpackdnrmf
                   0x000922                  __typef
@@ -438,8 +466,8 @@ External Symbols in Program Memory (by address):
                   0x000a32                  _sqrtf
                   0x000b46                  ___gtsf2
                   0x000b46                  ___gesf2
-                  0x000b4a                  ___divsf3
                   0x000b4a                  ___divsf3x
+                  0x000b4a                  ___divsf3
                   0x000cdc                  __sdivf
                   0x000d08                  __spackf
                   0x000dae                  __unpackf
@@ -460,363 +488,383 @@ External Symbols in Program Memory (by address):
                   0x000e6c                  _BurstBuffer256_Slice_Max
                   0x000e6e                  _BurstBuffer256_Pointer_Max
                   0x000e70                  _Uart_1_data_timeout_max_count
-                  0x000e71                  _MT25QL01_Number_Max
-                  0x000e72                  _MT25QL01_Sector_Max
-                  0x000e74                  _MT25QL01_bytes_Max
-                  0x000e78                  _NumberEventMax
-                  0x000e7a                  _EventPointerMax
-                  0x000e7c                  _MEM_CY15B064J_64_Slices_Max
-                  0x000e7e                  _MEM_CY15B064J_bytes_Max
-                  0x000e80                  _MEM_CY15B064J_Number_Max
-                  0x004ec8                  _main
-                  0x00507c                  _Get_Version_Firmware
-                  0x0050ae                  _IO_Ports_Setting
-                  0x0050b4                  _State_Machine_Reset
-                  0x0050ea                  _Init_Idle_State
-                  0x005108                  _Init_Drill_State
-                  0x0051d8                  _Disabled_All_Sensors
-                  0x005200                  _Fill_Data_Array
-                  0x005236                  _Save_To_RAM
-                  0x005240                  _Get_Voltage_3V3_5V
-                  0x00531a                  _Voltage_5V_Level_Check
-                  0x005360                  _Voltage_3V3_Level_Check
-                  0x00538a                  _Set_Burst_Array
-                  0x0055a4                  _Set_Burst_Writing
-                  0x00567e                  _Save_Super_Burst
-                  0x005686                  _RTOS_50us_Routine_250Hz
-                  0x005944                  _RTOS_50us_Routine_125Hz
-                  0x005f54                  _Fill_Array_For_Writing
-                  0x00651e                  _Write_To_Memory
-                  0x00658a                  _Read_Memory
-                  0x006590                  _Save_Event_Buffer
-                  0x006654                  _Save_Event_Cmd_Buffer
-                  0x006708                  _Write_Event_I2C_Mem
-                  0x00678e                  _Time_Sync
-                  0x00691e                  _Test_Calc_TF
-                  0x006aec                  _Calculation_TF
-                  0x006fc2                  _Read_Sensors
-                  0x006fc8                  _Start_Timer_3
-                  0x006ff0                  _Check_Timer_3
-                  0x007006                  _Stop_Timer_3
-                  0x00700e                  _Multiplication
-                  0x007022                  _Go_To_Sleep
-                  0x00702e                  _Wake_up_Fx
-                  0x007034                  _init_CAN_1
-                  0x0070fc                  _CAN_Send_MSG
-                  0x0072a2                  _CAN_Received_To_Uart
-                  0x0072d6                  _can_rec
-                  0x007430                  _CAN_Decode_Received
-                  0x00899e                  _CAN_Encode_Sending
-                  0x008ac6                  _MEM_MT25QL01_Init
-                  0x008b38                  _MEM_MT25QL01_Read_ID
-                  0x008b58                  _MEM_MT25QL01_Enter_4_Bytes_Mode
-                  0x008b76                  _MEM_MT25QL01_Enter_Deep_Power_Down
-                  0x008b94                  _MEM_MT25QL01_Release_Deep_Power_Down
-                  0x008bb4                  _MEM_MT25QL01_Get_Status
-                  0x008bdc                  _MEM_MT25QL01_Get_Flag
-                  0x008bf2                  _MEM_MT25QL01_Read_Freeze_Bit
-                  0x008c08                  _MEM_MT25QL01_Writing_Swap
-                  0x008c54                  _MEM_MT25QL01_Write_Bytes
-                  0x008de4                  _MEM_MT25QL01_Write_Enable
-                  0x008dfa                  _MEM_MT25QL01_Write_Disable
-                  0x008e10                  _MEM_MT25QL01_Get_Mem_Write_Pointer
-                  0x008e58                  _MEM_MT25QL01_Set_Mem_Write_Pointer
-                  0x008ee2                  _MEM_MT25QL01_Get_Mem_Read_Pointer
-                  0x008f2a                  _MEM_MT25QL01_Set_Mem_Read_Pointer
-                  0x008fb4                  _MEM_MT25QL01_Init_Read
-                  0x008fc6                  _MEM_MT25QL01_Reading_Swap
-                  0x008fd8                  _MEM_MT25QL01_Read_Bytes
-                  0x0090da                  _MEM_MT25QL01_End_Read
-                  0x0090e6                  _MEM_MT25QL01_Erase_Memory_Init
-                  0x0090f4                  _MEM_MT25QL01_Erase_Memory_Swap
-                  0x0090fc                  _MEM_MT25QL01_Erase_Memory
-                  0x009306                  _MEM_MT25QL01_Pointer_Seaching
-                  0x009caa                  _MEM_MT25QL01_Check_Status_Sleep
-                  0x009ce2                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
-                  0x009d20                  _MEM_MT25QL01_Wake_UP_All_Memory
-                  0x009d5e                  _MEM_MT25QL01_Shutdowm_All_Memory
-                  0x009dbc                  _ADXL373_SPI_Init
-                  0x009e12                  _ADXL373_SPI_Init_Wake_Up_Mode
-                  0x009ed4                  _ADXL373_SPI_Init_Instant_On_Impact
-                  0x009f14                  _ADXL373_SPI_ID
-                  0x009f30                  _ADXL373_SPI_Start_Sensor
-                  0x009f48                  _ADXL373_SPI_Stop_Sensor
-                  0x009f60                  _ADXL373_Shift_Data
-                  0x009fca                  _ADXL373_SPI_Get_Data
-                  0x009fe8                  _ADXL373_SPI_Format_Level
-                  0x00a094                  _ADXL373_SPI_Check_Level
-                  0x00a7c8                  _ADXL373_SPI_Get_Register
-                  0x00a7e6                  _ADXL373_SPI_Get_Interrupt
-                  0x00a7fa                  _ADXL373_SPI_Get_Max_Peak
-                  0x00a832                  _ADXL373_Check_Fifo_Full
-                  0x00a850                  _ADXL373_Read_Fifo
-                  0x00a85c                  _init_uart_1
-                  0x00a886                  _init_uart_1_DMA
-                  0x00a8b8                  _write_uart_1
-                  0x00a8ce                  _write_string_uart_1
-                  0x00a8f2                  _read_uart_1
-                  0x00a986                  _reset_uart_1_registers
-                  0x00a9b6                  _decode_uart_1_message
-                  0x00ab46                  _uart_1_send_message
-                  0x00ac68                  _uart_1_send_message_timed
-                  0x00ac74                  _GetChar
-                  0x00acae                  _init_uart_2
-                  0x00acd8                  _init_uart_2_DMA
-                  0x00ad0a                  _write_uart_2
-                  0x00ad20                  _write_string_uart_2
-                  0x00ad44                  _Dtect_MWD_Msg_Decoding
-                  0x00adce                  _init_uart_3
-                  0x00adf6                  _write_uart_3
-                  0x00ae0c                  _write_string_uart_3
-                  0x00ae30                  _initialize_mcu
-                  0x00ae88                  _init_interrupt
-                  0x00aec6                  _set_interrupt_Enable
-                  0x00aece                  _init_port
-                  0x00afac                  _init_sleep
-                  0x00afb8                  _Enable_Sleep_Interrupt
-                  0x00afc6                  _Disable_Sleep_Interrupt
-                  0x00afd6                  _init_osc_External
-                  0x00b038                  _init_osc_Internal
-                  0x00b08e                  _init_clock_switching
-                  0x00b094                  _clock_switching
-                  0x00b09a                  _init_timer_1
-                  0x00b0be                  _init_timer_2
-                  0x00b0ea                  _init_timer_3
-                  0x00b120                  _init_timer_4
-                  0x00b15a                  _start_timer_4
-                  0x00b166                  _stop_timer_4
-                  0x00b170                  _init_ref_clock
-                  0x00b1aa                  _CLC_config
-                  0x00b1ca                  _init_watch_dog
-                  0x00b1fa                  _start_watch_dog
-                  0x00b202                  _stop_watch_dog
-                  0x00b20a                  _init_Dead_Man_timer
-                  0x00b212                  _Reset_Dead_Man_timer
-                  0x00b220                  _init_SPI_1
-                  0x00b246                  _init_SPI_2
-                  0x00b26c                  _init_SPI_3
-                  0x00b292                  _init_SPI_2_slave
-                  0x00b2be                  _set_SS_Accel
-                  0x00b2ca                  _disable_SS_Accel
-                  0x00b2d6                  _SPI_1_Write
-                  0x00b2ee                  _SPI_2_Write
-                  0x00b306                  _SPI_3_Write
-                  0x00b31e                  _SPI_2_Write_Slave
-                  0x00b338                  _SPI_1_Routine
-                  0x00b3a2                  _SPI_2_Routine
-                  0x00b40c                  _SPI_3_Routine
-                  0x00b476                  _read_SPI_2_Slave
-                  0x00b47e                  _reset_SPI_2_registers
-                  0x00b484                  _decode_SPI_2_message
-                  0x00b48a                  _SPI_2_send_message
-                  0x00b496                  _SPI_1_Routine_Read
-                  0x00b500                  _SPI_2_Routine_Read
-                  0x00b56a                  _SPI_3_Routine_Read
-                  0x00b5d4                  _SET_ADC_ADS863x_POWER_UP
-                  0x00b5f4                  _Get_ADC_ADS863x_AUX_CONFIG
-                  0x00b628                  _SET_ADC_ADS863x_AUX_CONFIG
-                  0x00b648                  _SET_ADC_ADS863x_RANGE
-                  0x00b6b0                  _Get_ADC_ADS863x_RANGE
-                  0x00b6e4                  _SET_ADC_ADS863x_PAGE
-                  0x00b712                  _ADC_ADS863x_READ_DATA
-                  0x00b7a6                  _ADXL355_SPI_Init
-                  0x00b7ac                  _Get_Accel_Device_ID
-                  0x00b7c8                  _ADXL355_SPI_Read_Accel_Device_Register
-                  0x00b7ec                  _ADXL355_SPI_Write_Accel_Device_Register
-                  0x00b80e                  _ADXL355_SPI_Start_Sensor
-                  0x00b84c                  _ADXL355_SPI_Stop_Sensor
-                  0x00b884                  _ADXL355_SPI_Get_Data
-                  0x00b8a4                  _ADXL355_Multiple_Reading
-                  0x00b8ae                  _ADXL355_Read_Fifo
-                  0x00b8ba                  _ADXL355_Get_Streaming
-                  0x00b8c6                  _ADXL355_Set_Streaming
-                  0x00b8da                  _ADXL355_Data_Scan
-                  0x00b8e4                  _ADXL355_Acceleration_Data_Conversion
-                  0x00b95c                  _ADXL355_Get_Data
-                  0x00b964                  _Get_ADC_ADS868x_Device_ID
-                  0x00b990                  _SET_ADC_ADS868x_Device_ID
-                  0x00b9be                  _SET_ADC_ADS868x_RANGE
-                  0x00b9ee                  _Get_ADC_ADS868x_RANGE
-                  0x00ba2c                  _SET_ALARM_H_TH_REG
-                  0x00ba5c                  _GET_ALARM_H_TH_REG
-                  0x00ba94                  _ADC_ADS868x_READ_DATA
-                  0x00bac4                  _SET_ADC_ADS868x_DATAOUT_CTL
-                  0x00baf0                  _CRC_Init
-                  0x00bb24                  _CRC_ChecksumByte
-                  0x00bbc2                  _MUX1_ADG732_INIT
-                  0x00bbf2                  _MUX1_ADG732_CHIP_SELECT
-                  0x00bc60                  _MUX1_ADG732_CHIP_DESELECT
-                  0x00bc6a                  _Init_DMA
-                  0x00bc7c                  _DMA_Channel_0
-                  0x00bcba                  _DMA_Channel_1
-                  0x00bcfa                  _DMA_Channel_2
-                  0x00bd00                  _init_MAG_MMC5983MA
-                  0x00bd06                  _MAG_MMC5983MA_read_ID
-                  0x00bd20                  _MAG_MMC5983MA_Get_data
-                  0x00bd26                  _MAG_MMC5983MA_Write_data_SPI
-                  0x00bd44                  _MAG_MMC5983MA_Get_data_SPI
+                  0x000e71                  _Time_debug_max_count
+                  0x000e72                  _MT25QL01_Number_Max
+                  0x000e74                  _MT25QL01_Sector_Max
+                  0x000e76                  _MT25QL01_bytes_Max
+                  0x000e7a                  _Mag_Rotation_Det_Timeout_Max_Count
+                  0x000e7b                  _Mag_Rotation_Det_Sample_UP_Max_Count
+                  0x000e7c                  _Mag_Rotation_Det_Sample_Down_Max_Count
+                  0x000e7d                  _Mag_Rotation_Det_Peak_Max_Count
+                  0x000e7e                  _NumberEventMax
+                  0x000e80                  _EventPointerMax
+                  0x000e82                  _MEM_CY15B064J_64_Slices_Max
+                  0x000e84                  _MEM_CY15B064J_bytes_Max
+                  0x000e86                  _MEM_CY15B064J_Number_Max
+                  0x004ece                  _main
+                  0x00509e                  _Get_Version_Firmware
+                  0x0050d0                  _IO_Ports_Setting
+                  0x0050d6                  _State_Machine_Reset
+                  0x00510c                  _Init_Idle_State
+                  0x00512a                  _Init_Drill_State
+                  0x0051ee                  _Disabled_All_Sensors
+                  0x005202                  _Fill_Data_Array
+                  0x005238                  _Save_To_RAM
+                  0x005242                  _Get_Voltage_3V3_5V
+                  0x00531c                  _Voltage_5V_Level_Check
+                  0x005358                  _Voltage_3V3_Level_Check
+                  0x00537c                  _Set_Burst_Array
+                  0x005596                  _Set_Burst_Writing
+                  0x005670                  _Save_Super_Burst
+                  0x005678                  _RTOS_50us_Routine_250Hz
+                  0x005956                  _RTOS_50us_Routine_125Hz
+                  0x005f5e                  _Time_Adjustment
+                  0x005fea                  _Fill_Array_For_Writing
+                  0x0065b4                  _Mag_Rotation_Det_Routine
+                  0x0065be                  _Mag_Rotation_Det_Reset
+                  0x0065de                  _Write_To_Memory
+                  0x00664a                  _Read_Memory
+                  0x006650                  _Save_Event_Buffer
+                  0x006714                  _Save_Event_Cmd_Buffer
+                  0x0067c8                  _Write_Event_I2C_Mem
+                  0x00684e                  _Time_Sync
+                  0x0069de                  _Test_Calc_TF
+                  0x006bac                  _Calculation_TF
+                  0x007082                  _Read_Sensors
+                  0x007088                  _Start_Timer_3
+                  0x0070b0                  _Check_Timer_3
+                  0x0070c6                  _Stop_Timer_3
+                  0x0070ce                  _Multiplication
+                  0x0070e2                  _Go_To_Sleep
+                  0x0070ee                  _Wake_up_Fx
+                  0x0070f4                  _init_CAN_1
+                  0x0071bc                  _CAN_Send_MSG
+                  0x007362                  _CAN_Received_To_Uart
+                  0x007396                  _can_rec
+                  0x0074f0                  _CAN_Decode_Received
+                  0x008a64                  _CAN_Encode_Sending
+                  0x008b8c                  _MEM_MT25QL01_Init
+                  0x008bfe                  _MEM_MT25QL01_Read_ID
+                  0x008c1e                  _MEM_MT25QL01_Enter_4_Bytes_Mode
+                  0x008c3c                  _MEM_MT25QL01_Enter_Deep_Power_Down
+                  0x008c5a                  _MEM_MT25QL01_Release_Deep_Power_Down
+                  0x008c7a                  _MEM_MT25QL01_Get_Status
+                  0x008ca2                  _MEM_MT25QL01_Get_Flag
+                  0x008cb8                  _MEM_MT25QL01_Read_Freeze_Bit
+                  0x008cce                  _MEM_MT25QL01_Writing_Swap
+                  0x008d1a                  _MEM_MT25QL01_Write_Bytes
+                  0x008eaa                  _MEM_MT25QL01_Write_Enable
+                  0x008ec0                  _MEM_MT25QL01_Write_Disable
+                  0x008ed6                  _MEM_MT25QL01_Get_Mem_Write_Pointer
+                  0x008f1e                  _MEM_MT25QL01_Set_Mem_Write_Pointer
+                  0x008fa8                  _MEM_MT25QL01_Get_Mem_Read_Pointer
+                  0x008ff0                  _MEM_MT25QL01_Set_Mem_Read_Pointer
+                  0x00907a                  _MEM_MT25QL01_Init_Read
+                  0x00908c                  _MEM_MT25QL01_Reading_Swap
+                  0x00909e                  _MEM_MT25QL01_Read_Bytes
+                  0x0091a0                  _MEM_MT25QL01_End_Read
+                  0x0091ac                  _MEM_MT25QL01_Erase_Memory_Init
+                  0x0091ba                  _MEM_MT25QL01_Erase_Memory_Swap
+                  0x0091c2                  _MEM_MT25QL01_Erase_Memory
+                  0x0093cc                  _MEM_MT25QL01_Pointer_Seaching
+                  0x009d70                  _MEM_MT25QL01_Check_Status_Sleep
+                  0x009da8                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
+                  0x009de6                  _MEM_MT25QL01_Wake_UP_All_Memory
+                  0x009e24                  _MEM_MT25QL01_Shutdowm_All_Memory
+                  0x009e82                  _ADXL373_SPI_Init
+                  0x009ed8                  _ADXL373_SPI_Init_Wake_Up_Mode
+                  0x009f9a                  _ADXL373_SPI_Init_Instant_On_Impact
+                  0x009fda                  _ADXL373_SPI_ID
+                  0x009ff6                  _ADXL373_SPI_Start_Sensor
+                  0x00a00e                  _ADXL373_SPI_Stop_Sensor
+                  0x00a026                  _ADXL373_Shift_Data
+                  0x00a090                  _ADXL373_SPI_Get_Data
+                  0x00a0ae                  _ADXL373_SPI_Format_Level
+                  0x00a15a                  _ADXL373_SPI_Check_Level
+                  0x00a88e                  _ADXL373_SPI_Get_Register
+                  0x00a8ac                  _ADXL373_SPI_Get_Interrupt
+                  0x00a8c0                  _ADXL373_SPI_Get_Max_Peak
+                  0x00a8f8                  _ADXL373_Check_Fifo_Full
+                  0x00a916                  _ADXL373_Read_Fifo
+                  0x00a922                  _init_uart_1
+                  0x00a94c                  _init_uart_1_DMA
+                  0x00a97e                  _write_uart_1
+                  0x00a994                  _write_string_uart_1
+                  0x00a9b8                  _read_uart_1
+                  0x00aa4c                  _reset_uart_1_registers
+                  0x00aa7c                  _decode_uart_1_message
+                  0x00ac0c                  _uart_1_send_message
+                  0x00ad2e                  _uart_1_send_message_timed
+                  0x00ad3a                  _GetChar
+                  0x00ad74                  _init_uart_2
+                  0x00ad9e                  _init_uart_2_DMA
+                  0x00add0                  _write_uart_2
+                  0x00ade6                  _write_string_uart_2
+                  0x00ae0a                  _Dtect_MWD_Msg_Decoding
+                  0x00ae94                  _init_uart_3
+                  0x00aebc                  _write_uart_3
+                  0x00aed2                  _write_string_uart_3
+                  0x00aef6                  _initialize_mcu
+                  0x00af4e                  _init_interrupt
+                  0x00af8c                  _set_interrupt_Enable
+                  0x00af94                  _init_port
+                  0x00b072                  _init_sleep
+                  0x00b07e                  _Enable_Sleep_Interrupt
+                  0x00b08c                  _Disable_Sleep_Interrupt
+                  0x00b09c                  _init_osc_External
+                  0x00b0fe                  _init_osc_Internal
+                  0x00b154                  _init_clock_switching
+                  0x00b15a                  _clock_switching
+                  0x00b160                  _init_timer_1
+                  0x00b184                  _init_timer_2
+                  0x00b1b0                  _init_timer_3
+                  0x00b1e6                  _init_timer_4
+                  0x00b220                  _start_timer_4
+                  0x00b22c                  _stop_timer_4
+                  0x00b236                  _init_ref_clock
+                  0x00b270                  _CLC_config
+                  0x00b290                  _init_watch_dog
+                  0x00b2c0                  _start_watch_dog
+                  0x00b2c8                  _stop_watch_dog
+                  0x00b2d0                  _init_Dead_Man_timer
+                  0x00b2d8                  _Reset_Dead_Man_timer
+                  0x00b2e6                  _init_SPI_1
+                  0x00b30c                  _init_SPI_2
+                  0x00b332                  _init_SPI_3
+                  0x00b358                  _init_SPI_2_slave
+                  0x00b384                  _set_SS_Accel
+                  0x00b390                  _disable_SS_Accel
+                  0x00b39c                  _SPI_1_Write
+                  0x00b3b4                  _SPI_2_Write
+                  0x00b3cc                  _SPI_3_Write
+                  0x00b3e4                  _SPI_2_Write_Slave
+                  0x00b3fe                  _SPI_1_Routine
+                  0x00b468                  _SPI_2_Routine
+                  0x00b4d2                  _SPI_3_Routine
+                  0x00b53c                  _read_SPI_2_Slave
+                  0x00b544                  _reset_SPI_2_registers
+                  0x00b54a                  _decode_SPI_2_message
+                  0x00b550                  _SPI_2_send_message
+                  0x00b55c                  _SPI_1_Routine_Read
+                  0x00b5c6                  _SPI_2_Routine_Read
+                  0x00b630                  _SPI_3_Routine_Read
+                  0x00b69a                  _SET_ADC_ADS863x_POWER_UP
+                  0x00b6ba                  _Get_ADC_ADS863x_AUX_CONFIG
+                  0x00b6ee                  _SET_ADC_ADS863x_AUX_CONFIG
+                  0x00b70e                  _SET_ADC_ADS863x_RANGE
+                  0x00b776                  _Get_ADC_ADS863x_RANGE
+                  0x00b7aa                  _SET_ADC_ADS863x_PAGE
+                  0x00b7d8                  _ADC_ADS863x_READ_DATA
+                  0x00b86c                  _ADXL355_SPI_Init
+                  0x00b872                  _Get_Accel_Device_ID
+                  0x00b88e                  _ADXL355_SPI_Read_Accel_Device_Register
+                  0x00b8b2                  _ADXL355_SPI_Write_Accel_Device_Register
+                  0x00b8d4                  _ADXL355_SPI_Start_Sensor
+                  0x00b912                  _ADXL355_SPI_Stop_Sensor
+                  0x00b94a                  _ADXL355_SPI_Get_Data
+                  0x00b96a                  _ADXL355_Multiple_Reading
+                  0x00b974                  _ADXL355_Read_Fifo
+                  0x00b980                  _ADXL355_Get_Streaming
+                  0x00b98c                  _ADXL355_Set_Streaming
+                  0x00b9a0                  _ADXL355_Data_Scan
+                  0x00b9aa                  _ADXL355_Acceleration_Data_Conversion
+                  0x00ba22                  _ADXL355_Get_Data
+                  0x00ba2a                  _Get_ADC_ADS868x_Device_ID
+                  0x00ba56                  _SET_ADC_ADS868x_Device_ID
+                  0x00ba84                  _SET_ADC_ADS868x_RANGE
+                  0x00bab4                  _Get_ADC_ADS868x_RANGE
+                  0x00baf2                  _SET_ALARM_H_TH_REG
+                  0x00bb22                  _GET_ALARM_H_TH_REG
+                  0x00bb5a                  _ADC_ADS868x_READ_DATA
+                  0x00bb8a                  _SET_ADC_ADS868x_DATAOUT_CTL
+                  0x00bbb6                  _CRC_Init
+                  0x00bbea                  _CRC_ChecksumByte
+                  0x00bc88                  _MUX1_ADG732_INIT
+                  0x00bcb8                  _MUX1_ADG732_CHIP_SELECT
+                  0x00bd26                  _MUX1_ADG732_CHIP_DESELECT
+                  0x00bd30                  _Init_DMA
+                  0x00bd42                  _DMA_Channel_0
+                  0x00bd80                  _DMA_Channel_1
+                  0x00bdc0                  _DMA_Channel_2
+                  0x00bdc6                  _init_MAG_MMC5983MA
+                  0x00bdcc                  _MAG_MMC5983MA_read_ID
+                  0x00bde6                  _MAG_MMC5983MA_Get_data
+                  0x00bdec                  _MAG_MMC5983MA_Write_data_SPI
+                  0x00be0a                  _MAG_MMC5983MA_Get_data_SPI
+                  0x00be2a                  _MAG_MMC5983MA_Set_Sampling_Continuous
+                  0x00be42                  _MAG_MMC5983MA_Disable_Sampling_Continuous
                   0x057f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x00b712                  _ADC_ADS863x_READ_DATA
-                  0x00ba94                  _ADC_ADS868x_READ_DATA
-                  0x00b8e4                  _ADXL355_Acceleration_Data_Conversion
-                  0x00b8da                  _ADXL355_Data_Scan
-                  0x00b95c                  _ADXL355_Get_Data
-                  0x00b8ba                  _ADXL355_Get_Streaming
-                  0x00b8a4                  _ADXL355_Multiple_Reading
-                  0x00b8ae                  _ADXL355_Read_Fifo
-                  0x00b884                  _ADXL355_SPI_Get_Data
-                  0x00b7a6                  _ADXL355_SPI_Init
-                  0x00b7c8                  _ADXL355_SPI_Read_Accel_Device_Register
-                  0x00b80e                  _ADXL355_SPI_Start_Sensor
-                  0x00b84c                  _ADXL355_SPI_Stop_Sensor
-                  0x00b7ec                  _ADXL355_SPI_Write_Accel_Device_Register
-                  0x00b8c6                  _ADXL355_Set_Streaming
-                  0x00a832                  _ADXL373_Check_Fifo_Full
-                  0x00a850                  _ADXL373_Read_Fifo
-                  0x00a094                  _ADXL373_SPI_Check_Level
-                  0x009fe8                  _ADXL373_SPI_Format_Level
-                  0x009fca                  _ADXL373_SPI_Get_Data
-                  0x00a7e6                  _ADXL373_SPI_Get_Interrupt
-                  0x00a7fa                  _ADXL373_SPI_Get_Max_Peak
-                  0x00a7c8                  _ADXL373_SPI_Get_Register
-                  0x009f14                  _ADXL373_SPI_ID
-                  0x009dbc                  _ADXL373_SPI_Init
-                  0x009ed4                  _ADXL373_SPI_Init_Instant_On_Impact
-                  0x009e12                  _ADXL373_SPI_Init_Wake_Up_Mode
-                  0x009f30                  _ADXL373_SPI_Start_Sensor
-                  0x009f48                  _ADXL373_SPI_Stop_Sensor
-                  0x009f60                  _ADXL373_Shift_Data
+                  0x00b7d8                  _ADC_ADS863x_READ_DATA
+                  0x00bb5a                  _ADC_ADS868x_READ_DATA
+                  0x00b9aa                  _ADXL355_Acceleration_Data_Conversion
+                  0x00b9a0                  _ADXL355_Data_Scan
+                  0x00ba22                  _ADXL355_Get_Data
+                  0x00b980                  _ADXL355_Get_Streaming
+                  0x00b96a                  _ADXL355_Multiple_Reading
+                  0x00b974                  _ADXL355_Read_Fifo
+                  0x00b94a                  _ADXL355_SPI_Get_Data
+                  0x00b86c                  _ADXL355_SPI_Init
+                  0x00b88e                  _ADXL355_SPI_Read_Accel_Device_Register
+                  0x00b8d4                  _ADXL355_SPI_Start_Sensor
+                  0x00b912                  _ADXL355_SPI_Stop_Sensor
+                  0x00b8b2                  _ADXL355_SPI_Write_Accel_Device_Register
+                  0x00b98c                  _ADXL355_Set_Streaming
+                  0x00a8f8                  _ADXL373_Check_Fifo_Full
+                  0x00a916                  _ADXL373_Read_Fifo
+                  0x00a15a                  _ADXL373_SPI_Check_Level
+                  0x00a0ae                  _ADXL373_SPI_Format_Level
+                  0x00a090                  _ADXL373_SPI_Get_Data
+                  0x00a8ac                  _ADXL373_SPI_Get_Interrupt
+                  0x00a8c0                  _ADXL373_SPI_Get_Max_Peak
+                  0x00a88e                  _ADXL373_SPI_Get_Register
+                  0x009fda                  _ADXL373_SPI_ID
+                  0x009e82                  _ADXL373_SPI_Init
+                  0x009f9a                  _ADXL373_SPI_Init_Instant_On_Impact
+                  0x009ed8                  _ADXL373_SPI_Init_Wake_Up_Mode
+                  0x009ff6                  _ADXL373_SPI_Start_Sensor
+                  0x00a00e                  _ADXL373_SPI_Stop_Sensor
+                  0x00a026                  _ADXL373_Shift_Data
                   0x000e5b                  _Boot_Timeout_max_count
                   0x000e64                  _Buffer_Write_Pointer_Max
                   0x000e6e                  _BurstBuffer256_Pointer_Max
                   0x000e6c                  _BurstBuffer256_Slice_Max
                   0x000e68                  _Burst_Pause_Delay_max_count
                   0x000e66                  _Burst_Pointer_Max
-                  0x007430                  _CAN_Decode_Received
-                  0x00899e                  _CAN_Encode_Sending
-                  0x0072a2                  _CAN_Received_To_Uart
-                  0x0070fc                  _CAN_Send_MSG
-                  0x00b1aa                  _CLC_config
-                  0x00bb24                  _CRC_ChecksumByte
-                  0x00baf0                  _CRC_Init
-                  0x006aec                  _Calculation_TF
-                  0x006ff0                  _Check_Timer_3
-                  0x00bc7c                  _DMA_Channel_0
-                  0x00bcba                  _DMA_Channel_1
-                  0x00bcfa                  _DMA_Channel_2
-                  0x00afc6                  _Disable_Sleep_Interrupt
-                  0x0051d8                  _Disabled_All_Sensors
-                  0x00ad44                  _Dtect_MWD_Msg_Decoding
-                  0x00afb8                  _Enable_Sleep_Interrupt
-                  0x000e7a                  _EventPointerMax
-                  0x005f54                  _Fill_Array_For_Writing
-                  0x005200                  _Fill_Data_Array
-                  0x00ba5c                  _GET_ALARM_H_TH_REG
-                  0x00ac74                  _GetChar
-                  0x00b5f4                  _Get_ADC_ADS863x_AUX_CONFIG
-                  0x00b6b0                  _Get_ADC_ADS863x_RANGE
-                  0x00b964                  _Get_ADC_ADS868x_Device_ID
-                  0x00b9ee                  _Get_ADC_ADS868x_RANGE
-                  0x00b7ac                  _Get_Accel_Device_ID
-                  0x00507c                  _Get_Version_Firmware
-                  0x005240                  _Get_Voltage_3V3_5V
-                  0x007022                  _Go_To_Sleep
+                  0x0074f0                  _CAN_Decode_Received
+                  0x008a64                  _CAN_Encode_Sending
+                  0x007362                  _CAN_Received_To_Uart
+                  0x0071bc                  _CAN_Send_MSG
+                  0x00b270                  _CLC_config
+                  0x00bbea                  _CRC_ChecksumByte
+                  0x00bbb6                  _CRC_Init
+                  0x006bac                  _Calculation_TF
+                  0x0070b0                  _Check_Timer_3
+                  0x00bd42                  _DMA_Channel_0
+                  0x00bd80                  _DMA_Channel_1
+                  0x00bdc0                  _DMA_Channel_2
+                  0x00b08c                  _Disable_Sleep_Interrupt
+                  0x0051ee                  _Disabled_All_Sensors
+                  0x00ae0a                  _Dtect_MWD_Msg_Decoding
+                  0x00b07e                  _Enable_Sleep_Interrupt
+                  0x000e80                  _EventPointerMax
+                  0x005fea                  _Fill_Array_For_Writing
+                  0x005202                  _Fill_Data_Array
+                  0x00bb22                  _GET_ALARM_H_TH_REG
+                  0x00ad3a                  _GetChar
+                  0x00b6ba                  _Get_ADC_ADS863x_AUX_CONFIG
+                  0x00b776                  _Get_ADC_ADS863x_RANGE
+                  0x00ba2a                  _Get_ADC_ADS868x_Device_ID
+                  0x00bab4                  _Get_ADC_ADS868x_RANGE
+                  0x00b872                  _Get_Accel_Device_ID
+                  0x00509e                  _Get_Version_Firmware
+                  0x005242                  _Get_Voltage_3V3_5V
+                  0x0070e2                  _Go_To_Sleep
                   0x000e5f                  _Go_To_Sleep_max_count
                   0x000e5a                  _Heartbeat_max_count
-                  0x0050ae                  _IO_Ports_Setting
-                  0x00bc6a                  _Init_DMA
-                  0x005108                  _Init_Drill_State
-                  0x0050ea                  _Init_Idle_State
+                  0x0050d0                  _IO_Ports_Setting
+                  0x00bd30                  _Init_DMA
+                  0x00512a                  _Init_Drill_State
+                  0x00510c                  _Init_Idle_State
                   0x000e5e                  _Init_max_count
-                  0x00bd20                  _MAG_MMC5983MA_Get_data
-                  0x00bd44                  _MAG_MMC5983MA_Get_data_SPI
-                  0x00bd26                  _MAG_MMC5983MA_Write_data_SPI
-                  0x00bd06                  _MAG_MMC5983MA_read_ID
-                  0x000e7c                  _MEM_CY15B064J_64_Slices_Max
-                  0x000e80                  _MEM_CY15B064J_Number_Max
-                  0x000e7e                  _MEM_CY15B064J_bytes_Max
-                  0x009caa                  _MEM_MT25QL01_Check_Status_Sleep
-                  0x0090da                  _MEM_MT25QL01_End_Read
-                  0x008b58                  _MEM_MT25QL01_Enter_4_Bytes_Mode
-                  0x008b76                  _MEM_MT25QL01_Enter_Deep_Power_Down
-                  0x0090fc                  _MEM_MT25QL01_Erase_Memory
-                  0x0090e6                  _MEM_MT25QL01_Erase_Memory_Init
-                  0x0090f4                  _MEM_MT25QL01_Erase_Memory_Swap
-                  0x008bdc                  _MEM_MT25QL01_Get_Flag
-                  0x008ee2                  _MEM_MT25QL01_Get_Mem_Read_Pointer
-                  0x008e10                  _MEM_MT25QL01_Get_Mem_Write_Pointer
-                  0x008bb4                  _MEM_MT25QL01_Get_Status
-                  0x008ac6                  _MEM_MT25QL01_Init
-                  0x008fb4                  _MEM_MT25QL01_Init_Read
-                  0x009306                  _MEM_MT25QL01_Pointer_Seaching
-                  0x008fd8                  _MEM_MT25QL01_Read_Bytes
-                  0x008bf2                  _MEM_MT25QL01_Read_Freeze_Bit
-                  0x008b38                  _MEM_MT25QL01_Read_ID
-                  0x008fc6                  _MEM_MT25QL01_Reading_Swap
-                  0x008b94                  _MEM_MT25QL01_Release_Deep_Power_Down
-                  0x008f2a                  _MEM_MT25QL01_Set_Mem_Read_Pointer
-                  0x008e58                  _MEM_MT25QL01_Set_Mem_Write_Pointer
-                  0x009ce2                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
-                  0x009d5e                  _MEM_MT25QL01_Shutdowm_All_Memory
-                  0x009d20                  _MEM_MT25QL01_Wake_UP_All_Memory
-                  0x008c54                  _MEM_MT25QL01_Write_Bytes
-                  0x008dfa                  _MEM_MT25QL01_Write_Disable
-                  0x008de4                  _MEM_MT25QL01_Write_Enable
-                  0x008c08                  _MEM_MT25QL01_Writing_Swap
-                  0x000e71                  _MT25QL01_Number_Max
-                  0x000e72                  _MT25QL01_Sector_Max
-                  0x000e74                  _MT25QL01_bytes_Max
-                  0x00bc60                  _MUX1_ADG732_CHIP_DESELECT
-                  0x00bbf2                  _MUX1_ADG732_CHIP_SELECT
-                  0x00bbc2                  _MUX1_ADG732_INIT
-                  0x00700e                  _Multiplication
-                  0x000e78                  _NumberEventMax
-                  0x005944                  _RTOS_50us_Routine_125Hz
-                  0x005686                  _RTOS_50us_Routine_250Hz
-                  0x00658a                  _Read_Memory
-                  0x006fc2                  _Read_Sensors
-                  0x00b212                  _Reset_Dead_Man_timer
-                  0x00b628                  _SET_ADC_ADS863x_AUX_CONFIG
-                  0x00b6e4                  _SET_ADC_ADS863x_PAGE
-                  0x00b5d4                  _SET_ADC_ADS863x_POWER_UP
-                  0x00b648                  _SET_ADC_ADS863x_RANGE
-                  0x00bac4                  _SET_ADC_ADS868x_DATAOUT_CTL
-                  0x00b990                  _SET_ADC_ADS868x_Device_ID
-                  0x00b9be                  _SET_ADC_ADS868x_RANGE
-                  0x00ba2c                  _SET_ALARM_H_TH_REG
-                  0x00b338                  _SPI_1_Routine
-                  0x00b496                  _SPI_1_Routine_Read
-                  0x00b2d6                  _SPI_1_Write
-                  0x00b3a2                  _SPI_2_Routine
-                  0x00b500                  _SPI_2_Routine_Read
-                  0x00b2ee                  _SPI_2_Write
-                  0x00b31e                  _SPI_2_Write_Slave
-                  0x00b48a                  _SPI_2_send_message
-                  0x00b40c                  _SPI_3_Routine
-                  0x00b56a                  _SPI_3_Routine_Read
-                  0x00b306                  _SPI_3_Write
-                  0x006590                  _Save_Event_Buffer
-                  0x006654                  _Save_Event_Cmd_Buffer
-                  0x00567e                  _Save_Super_Burst
-                  0x005236                  _Save_To_RAM
-                  0x00538a                  _Set_Burst_Array
-                  0x0055a4                  _Set_Burst_Writing
-                  0x006fc8                  _Start_Timer_3
-                  0x0050b4                  _State_Machine_Reset
-                  0x007006                  _Stop_Timer_3
-                  0x00691e                  _Test_Calc_TF
+                  0x00be42                  _MAG_MMC5983MA_Disable_Sampling_Continuous
+                  0x00bde6                  _MAG_MMC5983MA_Get_data
+                  0x00be0a                  _MAG_MMC5983MA_Get_data_SPI
+                  0x00be2a                  _MAG_MMC5983MA_Set_Sampling_Continuous
+                  0x00bdec                  _MAG_MMC5983MA_Write_data_SPI
+                  0x00bdcc                  _MAG_MMC5983MA_read_ID
+                  0x000e82                  _MEM_CY15B064J_64_Slices_Max
+                  0x000e86                  _MEM_CY15B064J_Number_Max
+                  0x000e84                  _MEM_CY15B064J_bytes_Max
+                  0x009d70                  _MEM_MT25QL01_Check_Status_Sleep
+                  0x0091a0                  _MEM_MT25QL01_End_Read
+                  0x008c1e                  _MEM_MT25QL01_Enter_4_Bytes_Mode
+                  0x008c3c                  _MEM_MT25QL01_Enter_Deep_Power_Down
+                  0x0091c2                  _MEM_MT25QL01_Erase_Memory
+                  0x0091ac                  _MEM_MT25QL01_Erase_Memory_Init
+                  0x0091ba                  _MEM_MT25QL01_Erase_Memory_Swap
+                  0x008ca2                  _MEM_MT25QL01_Get_Flag
+                  0x008fa8                  _MEM_MT25QL01_Get_Mem_Read_Pointer
+                  0x008ed6                  _MEM_MT25QL01_Get_Mem_Write_Pointer
+                  0x008c7a                  _MEM_MT25QL01_Get_Status
+                  0x008b8c                  _MEM_MT25QL01_Init
+                  0x00907a                  _MEM_MT25QL01_Init_Read
+                  0x0093cc                  _MEM_MT25QL01_Pointer_Seaching
+                  0x00909e                  _MEM_MT25QL01_Read_Bytes
+                  0x008cb8                  _MEM_MT25QL01_Read_Freeze_Bit
+                  0x008bfe                  _MEM_MT25QL01_Read_ID
+                  0x00908c                  _MEM_MT25QL01_Reading_Swap
+                  0x008c5a                  _MEM_MT25QL01_Release_Deep_Power_Down
+                  0x008ff0                  _MEM_MT25QL01_Set_Mem_Read_Pointer
+                  0x008f1e                  _MEM_MT25QL01_Set_Mem_Write_Pointer
+                  0x009da8                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
+                  0x009e24                  _MEM_MT25QL01_Shutdowm_All_Memory
+                  0x009de6                  _MEM_MT25QL01_Wake_UP_All_Memory
+                  0x008d1a                  _MEM_MT25QL01_Write_Bytes
+                  0x008ec0                  _MEM_MT25QL01_Write_Disable
+                  0x008eaa                  _MEM_MT25QL01_Write_Enable
+                  0x008cce                  _MEM_MT25QL01_Writing_Swap
+                  0x000e72                  _MT25QL01_Number_Max
+                  0x000e74                  _MT25QL01_Sector_Max
+                  0x000e76                  _MT25QL01_bytes_Max
+                  0x00bd26                  _MUX1_ADG732_CHIP_DESELECT
+                  0x00bcb8                  _MUX1_ADG732_CHIP_SELECT
+                  0x00bc88                  _MUX1_ADG732_INIT
+                  0x000e7d                  _Mag_Rotation_Det_Peak_Max_Count
+                  0x0065be                  _Mag_Rotation_Det_Reset
+                  0x0065b4                  _Mag_Rotation_Det_Routine
+                  0x000e7c                  _Mag_Rotation_Det_Sample_Down_Max_Count
+                  0x000e7b                  _Mag_Rotation_Det_Sample_UP_Max_Count
+                  0x000e7a                  _Mag_Rotation_Det_Timeout_Max_Count
+                  0x0070ce                  _Multiplication
+                  0x000e7e                  _NumberEventMax
+                  0x005956                  _RTOS_50us_Routine_125Hz
+                  0x005678                  _RTOS_50us_Routine_250Hz
+                  0x00664a                  _Read_Memory
+                  0x007082                  _Read_Sensors
+                  0x00b2d8                  _Reset_Dead_Man_timer
+                  0x00b6ee                  _SET_ADC_ADS863x_AUX_CONFIG
+                  0x00b7aa                  _SET_ADC_ADS863x_PAGE
+                  0x00b69a                  _SET_ADC_ADS863x_POWER_UP
+                  0x00b70e                  _SET_ADC_ADS863x_RANGE
+                  0x00bb8a                  _SET_ADC_ADS868x_DATAOUT_CTL
+                  0x00ba56                  _SET_ADC_ADS868x_Device_ID
+                  0x00ba84                  _SET_ADC_ADS868x_RANGE
+                  0x00baf2                  _SET_ALARM_H_TH_REG
+                  0x00b3fe                  _SPI_1_Routine
+                  0x00b55c                  _SPI_1_Routine_Read
+                  0x00b39c                  _SPI_1_Write
+                  0x00b468                  _SPI_2_Routine
+                  0x00b5c6                  _SPI_2_Routine_Read
+                  0x00b3b4                  _SPI_2_Write
+                  0x00b3e4                  _SPI_2_Write_Slave
+                  0x00b550                  _SPI_2_send_message
+                  0x00b4d2                  _SPI_3_Routine
+                  0x00b630                  _SPI_3_Routine_Read
+                  0x00b3cc                  _SPI_3_Write
+                  0x006650                  _Save_Event_Buffer
+                  0x006714                  _Save_Event_Cmd_Buffer
+                  0x005670                  _Save_Super_Burst
+                  0x005238                  _Save_To_RAM
+                  0x00537c                  _Set_Burst_Array
+                  0x005596                  _Set_Burst_Writing
+                  0x007088                  _Start_Timer_3
+                  0x0050d6                  _State_Machine_Reset
+                  0x0070c6                  _Stop_Timer_3
+                  0x0069de                  _Test_Calc_TF
+                  0x005f5e                  _Time_Adjustment
                   0x000e5d                  _Time_Stamp_max_count
-                  0x00678e                  _Time_Sync
+                  0x00684e                  _Time_Sync
                   0x000e5c                  _Time_Sync_max_count
+                  0x000e71                  _Time_debug_max_count
                   0x000e70                  _Uart_1_data_timeout_max_count
-                  0x005360                  _Voltage_3V3_Level_Check
-                  0x00531a                  _Voltage_5V_Level_Check
-                  0x00702e                  _Wake_up_Fx
-                  0x006708                  _Write_Event_I2C_Mem
-                  0x00651e                  _Write_To_Memory
+                  0x005358                  _Voltage_3V3_Level_Check
+                  0x00531c                  _Voltage_5V_Level_Check
+                  0x0070ee                  _Wake_up_Fx
+                  0x0067c8                  _Write_Event_I2C_Mem
+                  0x0065de                  _Write_To_Memory
                   0x00043a                  __C1RXInterrupt
                   0x000490                  __CCT4Interrupt
                   0x0004c0                  __CNBInterrupt
@@ -859,59 +907,59 @@ External Symbols in Program Memory (by name):
                   0x000922                  __typef
                   0x0008c4                  __unpackdnrmf
                   0x000dae                  __unpackf
-                  0x0072d6                  _can_rec
-                  0x00b094                  _clock_switching
+                  0x007396                  _can_rec
+                  0x00b15a                  _clock_switching
                   0x000e60                  _debug_LED_Burst_Fast_max_count
                   0x000e61                  _debug_LED_Burst_max_count
                   0x000e62                  _debug_LED_max_count
-                  0x00b484                  _decode_SPI_2_message
-                  0x00a9b6                  _decode_uart_1_message
-                  0x00b2ca                  _disable_SS_Accel
-                  0x007034                  _init_CAN_1
-                  0x00b20a                  _init_Dead_Man_timer
-                  0x00bd00                  _init_MAG_MMC5983MA
-                  0x00b220                  _init_SPI_1
-                  0x00b246                  _init_SPI_2
-                  0x00b292                  _init_SPI_2_slave
-                  0x00b26c                  _init_SPI_3
-                  0x00b08e                  _init_clock_switching
-                  0x00ae88                  _init_interrupt
-                  0x00afd6                  _init_osc_External
-                  0x00b038                  _init_osc_Internal
-                  0x00aece                  _init_port
-                  0x00b170                  _init_ref_clock
-                  0x00afac                  _init_sleep
-                  0x00b09a                  _init_timer_1
-                  0x00b0be                  _init_timer_2
-                  0x00b0ea                  _init_timer_3
-                  0x00b120                  _init_timer_4
-                  0x00a85c                  _init_uart_1
-                  0x00a886                  _init_uart_1_DMA
-                  0x00acae                  _init_uart_2
-                  0x00acd8                  _init_uart_2_DMA
-                  0x00adce                  _init_uart_3
-                  0x00b1ca                  _init_watch_dog
-                  0x00ae30                  _initialize_mcu
-                  0x004ec8                  _main
-                  0x00b476                  _read_SPI_2_Slave
-                  0x00a8f2                  _read_uart_1
-                  0x00b47e                  _reset_SPI_2_registers
-                  0x00a986                  _reset_uart_1_registers
-                  0x00b2be                  _set_SS_Accel
-                  0x00aec6                  _set_interrupt_Enable
+                  0x00b54a                  _decode_SPI_2_message
+                  0x00aa7c                  _decode_uart_1_message
+                  0x00b390                  _disable_SS_Accel
+                  0x0070f4                  _init_CAN_1
+                  0x00b2d0                  _init_Dead_Man_timer
+                  0x00bdc6                  _init_MAG_MMC5983MA
+                  0x00b2e6                  _init_SPI_1
+                  0x00b30c                  _init_SPI_2
+                  0x00b358                  _init_SPI_2_slave
+                  0x00b332                  _init_SPI_3
+                  0x00b154                  _init_clock_switching
+                  0x00af4e                  _init_interrupt
+                  0x00b09c                  _init_osc_External
+                  0x00b0fe                  _init_osc_Internal
+                  0x00af94                  _init_port
+                  0x00b236                  _init_ref_clock
+                  0x00b072                  _init_sleep
+                  0x00b160                  _init_timer_1
+                  0x00b184                  _init_timer_2
+                  0x00b1b0                  _init_timer_3
+                  0x00b1e6                  _init_timer_4
+                  0x00a922                  _init_uart_1
+                  0x00a94c                  _init_uart_1_DMA
+                  0x00ad74                  _init_uart_2
+                  0x00ad9e                  _init_uart_2_DMA
+                  0x00ae94                  _init_uart_3
+                  0x00b290                  _init_watch_dog
+                  0x00aef6                  _initialize_mcu
+                  0x004ece                  _main
+                  0x00b53c                  _read_SPI_2_Slave
+                  0x00a9b8                  _read_uart_1
+                  0x00b544                  _reset_SPI_2_registers
+                  0x00aa4c                  _reset_uart_1_registers
+                  0x00b384                  _set_SS_Accel
+                  0x00af8c                  _set_interrupt_Enable
                   0x000a32                  _sqrtf
-                  0x00b15a                  _start_timer_4
-                  0x00b1fa                  _start_watch_dog
-                  0x00b166                  _stop_timer_4
-                  0x00b202                  _stop_watch_dog
-                  0x00ab46                  _uart_1_send_message
-                  0x00ac68                  _uart_1_send_message_timed
-                  0x00a8ce                  _write_string_uart_1
-                  0x00ad20                  _write_string_uart_2
-                  0x00ae0c                  _write_string_uart_3
-                  0x00a8b8                  _write_uart_1
-                  0x00ad0a                  _write_uart_2
-                  0x00adf6                  _write_uart_3
+                  0x00b220                  _start_timer_4
+                  0x00b2c0                  _start_watch_dog
+                  0x00b22c                  _stop_timer_4
+                  0x00b2c8                  _stop_watch_dog
+                  0x00ac0c                  _uart_1_send_message
+                  0x00ad2e                  _uart_1_send_message_timed
+                  0x00a994                  _write_string_uart_1
+                  0x00ade6                  _write_string_uart_2
+                  0x00aed2                  _write_string_uart_3
+                  0x00a97e                  _write_uart_1
+                  0x00add0                  _write_uart_2
+                  0x00aebc                  _write_uart_3
 
 Memory Configuration
 
@@ -1135,114 +1183,114 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x1328e
+.debug_info       0x000000      0x13716
  *(.debug_info)
  .debug_info      0x000000        0x7b9 build/default/production/_ext/1472/Accel_ADXL355.o
  .debug_info      0x0007b9        0xbcb build/default/production/_ext/1472/Accel_ADXL373.o
- .debug_info      0x001384       0x293e build/default/production/_ext/1472/CAN.o
- .debug_info      0x003cc2        0x6b8 build/default/production/_ext/1472/CRC.o
- .debug_info      0x00437a        0xc79 build/default/production/_ext/1472/DMA.o
- .debug_info      0x004ff3       0x44c3 build/default/production/_ext/1472/Init.o
- .debug_info      0x0094b6        0x392 build/default/production/_ext/1472/MAG_MMC5983MA.o
- .debug_info      0x009848       0x1132 build/default/production/_ext/1472/MEM_MT25QL01.o
- .debug_info      0x00a97a       0x1b30 build/default/production/_ext/1472/SPI.o
- .debug_info      0x00c4aa       0x1d42 build/default/production/_ext/1472/Uart.o
- .debug_info      0x00e1ec       0x38ce build/default/production/_ext/1472/main.o
- .debug_info      0x011aba        0x37c build/default/production/_ext/1472/MUX1_ADG732.o
- .debug_info      0x011e36        0x532 build/default/production/_ext/1472/ADC_ADS868x.o
- .debug_info      0x012368        0x49c build/default/production/_ext/1472/ADC_ADS863x.o
- .debug_info      0x012804         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
- .debug_info      0x012891         0x8f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
- .debug_info      0x012920         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_info      0x0129ad         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_info      0x012a4a         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_info      0x012ae7         0xa0 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_info      0x012b87         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_info      0x012c29         0x9c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_info      0x012cc5         0x9f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_info      0x012d64         0x8f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
- .debug_info      0x012df3         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_info      0x012e84         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_info      0x012f0f         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
- .debug_info      0x012f9a         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_info      0x013037         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_info      0x0130d4         0x9e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_info      0x013172         0x8e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
- .debug_info      0x013200         0x8e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
+ .debug_info      0x001384       0x2948 build/default/production/_ext/1472/CAN.o
+ .debug_info      0x003ccc        0x6b8 build/default/production/_ext/1472/CRC.o
+ .debug_info      0x004384        0xc79 build/default/production/_ext/1472/DMA.o
+ .debug_info      0x004ffd       0x44c3 build/default/production/_ext/1472/Init.o
+ .debug_info      0x0094c0        0x440 build/default/production/_ext/1472/MAG_MMC5983MA.o
+ .debug_info      0x009900       0x1123 build/default/production/_ext/1472/MEM_MT25QL01.o
+ .debug_info      0x00aa23       0x1b30 build/default/production/_ext/1472/SPI.o
+ .debug_info      0x00c553       0x1d42 build/default/production/_ext/1472/Uart.o
+ .debug_info      0x00e295       0x3cad build/default/production/_ext/1472/main.o
+ .debug_info      0x011f42        0x37c build/default/production/_ext/1472/MUX1_ADG732.o
+ .debug_info      0x0122be        0x532 build/default/production/_ext/1472/ADC_ADS868x.o
+ .debug_info      0x0127f0        0x49c build/default/production/_ext/1472/ADC_ADS863x.o
+ .debug_info      0x012c8c         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
+ .debug_info      0x012d19         0x8f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
+ .debug_info      0x012da8         0x8d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_info      0x012e35         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_info      0x012ed2         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_info      0x012f6f         0xa0 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_info      0x01300f         0xa2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_info      0x0130b1         0x9c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_info      0x01314d         0x9f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_info      0x0131ec         0x8f c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
+ .debug_info      0x01327b         0x91 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_info      0x01330c         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_info      0x013397         0x8b c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
+ .debug_info      0x013422         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_info      0x0134bf         0x9d c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_info      0x01355c         0x9e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_info      0x0135fa         0x8e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
+ .debug_info      0x013688         0x8e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x1382
+.debug_abbrev     0x000000       0x1349
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x198 build/default/production/_ext/1472/Accel_ADXL355.o
  .debug_abbrev    0x000198        0x12b build/default/production/_ext/1472/Accel_ADXL373.o
- .debug_abbrev    0x0002c3        0x260 build/default/production/_ext/1472/CAN.o
- .debug_abbrev    0x000523         0xdb build/default/production/_ext/1472/CRC.o
- .debug_abbrev    0x0005fe         0xc5 build/default/production/_ext/1472/DMA.o
- .debug_abbrev    0x0006c3        0x136 build/default/production/_ext/1472/Init.o
- .debug_abbrev    0x0007f9         0xf7 build/default/production/_ext/1472/MAG_MMC5983MA.o
- .debug_abbrev    0x0008f0        0x15f build/default/production/_ext/1472/MEM_MT25QL01.o
- .debug_abbrev    0x000a4f        0x18b build/default/production/_ext/1472/SPI.o
- .debug_abbrev    0x000bda        0x205 build/default/production/_ext/1472/Uart.o
- .debug_abbrev    0x000ddf        0x244 build/default/production/_ext/1472/main.o
- .debug_abbrev    0x001023         0xc1 build/default/production/_ext/1472/MUX1_ADG732.o
- .debug_abbrev    0x0010e4         0x9b build/default/production/_ext/1472/ADC_ADS868x.o
- .debug_abbrev    0x00117f         0x9b build/default/production/_ext/1472/ADC_ADS863x.o
- .debug_abbrev    0x00121a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
- .debug_abbrev    0x00122e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
- .debug_abbrev    0x001242         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_abbrev    0x001256         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_abbrev    0x00126a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_abbrev    0x00127e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_abbrev    0x001292         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_abbrev    0x0012a6         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_abbrev    0x0012ba         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_abbrev    0x0012ce         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
- .debug_abbrev    0x0012e2         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_abbrev    0x0012f6         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_abbrev    0x00130a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
- .debug_abbrev    0x00131e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_abbrev    0x001332         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_abbrev    0x001346         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_abbrev    0x00135a         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
- .debug_abbrev    0x00136e         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
+ .debug_abbrev    0x0002c3        0x253 build/default/production/_ext/1472/CAN.o
+ .debug_abbrev    0x000516         0xdb build/default/production/_ext/1472/CRC.o
+ .debug_abbrev    0x0005f1         0xc5 build/default/production/_ext/1472/DMA.o
+ .debug_abbrev    0x0006b6        0x136 build/default/production/_ext/1472/Init.o
+ .debug_abbrev    0x0007ec         0xd8 build/default/production/_ext/1472/MAG_MMC5983MA.o
+ .debug_abbrev    0x0008c4        0x15f build/default/production/_ext/1472/MEM_MT25QL01.o
+ .debug_abbrev    0x000a23        0x18b build/default/production/_ext/1472/SPI.o
+ .debug_abbrev    0x000bae        0x205 build/default/production/_ext/1472/Uart.o
+ .debug_abbrev    0x000db3        0x237 build/default/production/_ext/1472/main.o
+ .debug_abbrev    0x000fea         0xc1 build/default/production/_ext/1472/MUX1_ADG732.o
+ .debug_abbrev    0x0010ab         0x9b build/default/production/_ext/1472/ADC_ADS868x.o
+ .debug_abbrev    0x001146         0x9b build/default/production/_ext/1472/ADC_ADS863x.o
+ .debug_abbrev    0x0011e1         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
+ .debug_abbrev    0x0011f5         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
+ .debug_abbrev    0x001209         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_abbrev    0x00121d         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_abbrev    0x001231         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_abbrev    0x001245         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_abbrev    0x001259         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_abbrev    0x00126d         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_abbrev    0x001281         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_abbrev    0x001295         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
+ .debug_abbrev    0x0012a9         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_abbrev    0x0012bd         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_abbrev    0x0012d1         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
+ .debug_abbrev    0x0012e5         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_abbrev    0x0012f9         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_abbrev    0x00130d         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_abbrev    0x001321         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
+ .debug_abbrev    0x001335         0x14 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
 
-.debug_line       0x000000       0x2924
+.debug_line       0x000000       0x2972
  *(.debug_line)
  .debug_line      0x000000        0x117 build/default/production/_ext/1472/Accel_ADXL355.o
  .debug_line      0x000117        0x264 build/default/production/_ext/1472/Accel_ADXL373.o
- .debug_line      0x00037b        0x4fe build/default/production/_ext/1472/CAN.o
- .debug_line      0x000879        0x138 build/default/production/_ext/1472/CRC.o
- .debug_line      0x0009b1        0x127 build/default/production/_ext/1472/DMA.o
- .debug_line      0x000ad8        0x226 build/default/production/_ext/1472/Init.o
- .debug_line      0x000cfe         0xb6 build/default/production/_ext/1472/MAG_MMC5983MA.o
- .debug_line      0x000db4        0x3d1 build/default/production/_ext/1472/MEM_MT25QL01.o
- .debug_line      0x001185        0x1d3 build/default/production/_ext/1472/SPI.o
- .debug_line      0x001358        0x253 build/default/production/_ext/1472/Uart.o
- .debug_line      0x0015ab        0x7d5 build/default/production/_ext/1472/main.o
- .debug_line      0x001d80        0x13c build/default/production/_ext/1472/MUX1_ADG732.o
- .debug_line      0x001ebc         0xe9 build/default/production/_ext/1472/ADC_ADS868x.o
- .debug_line      0x001fa5         0xe6 build/default/production/_ext/1472/ADC_ADS863x.o
- .debug_line      0x00208b         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
- .debug_line      0x0020e1         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
- .debug_line      0x00211b         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
- .debug_line      0x002165        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
- .debug_line      0x00229b         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
- .debug_line      0x002367         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
- .debug_line      0x0023d9         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
- .debug_line      0x002453         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
- .debug_line      0x0024b1         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
- .debug_line      0x002502         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
- .debug_line      0x002549         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
- .debug_line      0x0025b5         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
- .debug_line      0x00260f         0x35 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
- .debug_line      0x002644        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
- .debug_line      0x002768         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
- .debug_line      0x002800         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
- .debug_line      0x002879         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
- .debug_line      0x002893         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
- .debug_line      0x0028e6         0x3e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
+ .debug_line      0x00037b        0x500 build/default/production/_ext/1472/CAN.o
+ .debug_line      0x00087b        0x138 build/default/production/_ext/1472/CRC.o
+ .debug_line      0x0009b3        0x127 build/default/production/_ext/1472/DMA.o
+ .debug_line      0x000ada        0x226 build/default/production/_ext/1472/Init.o
+ .debug_line      0x000d00         0xc5 build/default/production/_ext/1472/MAG_MMC5983MA.o
+ .debug_line      0x000dc5        0x3d1 build/default/production/_ext/1472/MEM_MT25QL01.o
+ .debug_line      0x001196        0x1d3 build/default/production/_ext/1472/SPI.o
+ .debug_line      0x001369        0x253 build/default/production/_ext/1472/Uart.o
+ .debug_line      0x0015bc        0x812 build/default/production/_ext/1472/main.o
+ .debug_line      0x001dce        0x13c build/default/production/_ext/1472/MUX1_ADG732.o
+ .debug_line      0x001f0a         0xe9 build/default/production/_ext/1472/ADC_ADS868x.o
+ .debug_line      0x001ff3         0xe6 build/default/production/_ext/1472/ADC_ADS863x.o
+ .debug_line      0x0020d9         0x56 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.CH_o)
+ .debug_line      0x00212f         0x3a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.CH_o)
+ .debug_line      0x002169         0x4a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.CH_o)
+ .debug_line      0x0021b3        0x136 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.CH_o)
+ .debug_line      0x0022e9         0xcc c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.CH_o)
+ .debug_line      0x0023b5         0x72 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.CH_o)
+ .debug_line      0x002427         0x7a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.CH_o)
+ .debug_line      0x0024a1         0x5e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.CH_o)
+ .debug_line      0x0024ff         0x51 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.CH_o)
+ .debug_line      0x002550         0x47 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.CH_o)
+ .debug_line      0x002597         0x6c c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.CH_o)
+ .debug_line      0x002603         0x5a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.CH_o)
+ .debug_line      0x00265d         0x35 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fgtge.CH_o)
+ .debug_line      0x002692        0x124 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsf3x.CH_o)
+ .debug_line      0x0027b6         0x98 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(spackfx.CH_o)
+ .debug_line      0x00284e         0x79 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackfx.CH_o)
+ .debug_line      0x0028c7         0x1a c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
+ .debug_line      0x0028e1         0x53 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fcompare.CH_o)
+ .debug_line      0x002934         0x3e c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
 
-.debug_frame      0x000000       0x16be
+.debug_frame      0x000000       0x1740
  *(.debug_frame)
  .debug_frame     0x000000        0x188 build/default/production/_ext/1472/Accel_ADXL355.o
  .debug_frame     0x000188        0x19a build/default/production/_ext/1472/Accel_ADXL373.o
@@ -1250,31 +1298,31 @@ __FBTSEQ
  .debug_frame     0x0003ea         0x48 build/default/production/_ext/1472/CRC.o
  .debug_frame     0x000432         0x7c build/default/production/_ext/1472/DMA.o
  .debug_frame     0x0004ae        0x284 build/default/production/_ext/1472/Init.o
- .debug_frame     0x000732         0x96 build/default/production/_ext/1472/MAG_MMC5983MA.o
- .debug_frame     0x0007c8        0x312 build/default/production/_ext/1472/MEM_MT25QL01.o
- .debug_frame     0x000ada        0x24c build/default/production/_ext/1472/SPI.o
- .debug_frame     0x000d26        0x1f0 build/default/production/_ext/1472/Uart.o
- .debug_frame     0x000f16        0x598 build/default/production/_ext/1472/main.o
- .debug_frame     0x0014ae         0x62 build/default/production/_ext/1472/MUX1_ADG732.o
- .debug_frame     0x001510         0xe4 build/default/production/_ext/1472/ADC_ADS868x.o
- .debug_frame     0x0015f4         0xca build/default/production/_ext/1472/ADC_ADS863x.o
+ .debug_frame     0x000732         0xca build/default/production/_ext/1472/MAG_MMC5983MA.o
+ .debug_frame     0x0007fc        0x312 build/default/production/_ext/1472/MEM_MT25QL01.o
+ .debug_frame     0x000b0e        0x24c build/default/production/_ext/1472/SPI.o
+ .debug_frame     0x000d5a        0x1f0 build/default/production/_ext/1472/Uart.o
+ .debug_frame     0x000f4a        0x5e6 build/default/production/_ext/1472/main.o
+ .debug_frame     0x001530         0x62 build/default/production/_ext/1472/MUX1_ADG732.o
+ .debug_frame     0x001592         0xe4 build/default/production/_ext/1472/ADC_ADS868x.o
+ .debug_frame     0x001676         0xca build/default/production/_ext/1472/ADC_ADS863x.o
 
-.debug_str        0x000000       0x1659
+.debug_str        0x000000       0x1770
  *(.debug_str)
  .debug_str       0x000000         0x2c build/default/production/_ext/1472/Accel_ADXL355.o
  .debug_str       0x00002c         0x84 build/default/production/_ext/1472/Accel_ADXL373.o
- .debug_str       0x0000b0        0x3d3 build/default/production/_ext/1472/CAN.o
- .debug_str       0x000483         0x3f build/default/production/_ext/1472/CRC.o
- .debug_str       0x0004c2         0x42 build/default/production/_ext/1472/DMA.o
- .debug_str       0x000504        0x31e build/default/production/_ext/1472/Init.o
- .debug_str       0x000822         0x1e build/default/production/_ext/1472/MAG_MMC5983MA.o
- .debug_str       0x000840        0x1a8 build/default/production/_ext/1472/MEM_MT25QL01.o
- .debug_str       0x0009e8        0x23b build/default/production/_ext/1472/SPI.o
- .debug_str       0x000c23        0x1cf build/default/production/_ext/1472/Uart.o
- .debug_str       0x000df2        0x7eb build/default/production/_ext/1472/main.o
- .debug_str       0x0015dd         0x14 build/default/production/_ext/1472/MUX1_ADG732.o
- .debug_str       0x0015f1         0x34 build/default/production/_ext/1472/ADC_ADS868x.o
- .debug_str       0x001625         0x34 build/default/production/_ext/1472/ADC_ADS863x.o
+ .debug_str       0x0000b0        0x3e3 build/default/production/_ext/1472/CAN.o
+ .debug_str       0x000493         0x3f build/default/production/_ext/1472/CRC.o
+ .debug_str       0x0004d2         0x42 build/default/production/_ext/1472/DMA.o
+ .debug_str       0x000514        0x31e build/default/production/_ext/1472/Init.o
+ .debug_str       0x000832         0x25 build/default/production/_ext/1472/MAG_MMC5983MA.o
+ .debug_str       0x000857        0x1a8 build/default/production/_ext/1472/MEM_MT25QL01.o
+ .debug_str       0x0009ff        0x23b build/default/production/_ext/1472/SPI.o
+ .debug_str       0x000c3a        0x1cf build/default/production/_ext/1472/Uart.o
+ .debug_str       0x000e09        0x8eb build/default/production/_ext/1472/main.o
+ .debug_str       0x0016f4         0x14 build/default/production/_ext/1472/MUX1_ADG732.o
+ .debug_str       0x001708         0x34 build/default/production/_ext/1472/ADC_ADS868x.o
+ .debug_str       0x00173c         0x34 build/default/production/_ext/1472/ADC_ADS863x.o
 
 .debug_loc
  *(.debug_loc)
@@ -1283,7 +1331,7 @@ __FBTSEQ
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000       0x1fb4
+                  0x000000       0x229f
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000        0x1b2 build/default/production/_ext/1472/Accel_ADXL355.o
@@ -1298,21 +1346,21 @@ __FBTSEQ
  .debug_pubnames
                   0x000480        0x1f2 build/default/production/_ext/1472/Init.o
  .debug_pubnames
-                  0x000672         0x9e build/default/production/_ext/1472/MAG_MMC5983MA.o
+                  0x000672         0xf6 build/default/production/_ext/1472/MAG_MMC5983MA.o
  .debug_pubnames
-                  0x000710        0x3a6 build/default/production/_ext/1472/MEM_MT25QL01.o
+                  0x000768        0x3a6 build/default/production/_ext/1472/MEM_MT25QL01.o
  .debug_pubnames
-                  0x000ab6        0x19a build/default/production/_ext/1472/SPI.o
+                  0x000b0e        0x19a build/default/production/_ext/1472/SPI.o
  .debug_pubnames
-                  0x000c50        0x187 build/default/production/_ext/1472/Uart.o
+                  0x000ca8        0x187 build/default/production/_ext/1472/Uart.o
  .debug_pubnames
-                  0x000dd7        0xfbe build/default/production/_ext/1472/main.o
+                  0x000e2f       0x1251 build/default/production/_ext/1472/main.o
  .debug_pubnames
-                  0x001d95         0x61 build/default/production/_ext/1472/MUX1_ADG732.o
+                  0x002080         0x61 build/default/production/_ext/1472/MUX1_ADG732.o
  .debug_pubnames
-                  0x001df6         0xea build/default/production/_ext/1472/ADC_ADS868x.o
+                  0x0020e1         0xea build/default/production/_ext/1472/ADC_ADS868x.o
  .debug_pubnames
-                  0x001ee0         0xd4 build/default/production/_ext/1472/ADC_ADS863x.o
+                  0x0021cb         0xd4 build/default/production/_ext/1472/ADC_ADS863x.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -5613,8 +5661,8 @@ __c30_signature
  __c30_signature
                   0x0017c2          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack2.CH_o)
 
-.nbss               0x1000         0xa6
- .nbss              0x1000         0xa6 build/default/production/_ext/1472/main.o
+.nbss               0x1000         0xb6
+ .nbss              0x1000         0xb6 build/default/production/_ext/1472/main.o
                     0x1000                  _Pointer_Block_Flash_test
                     0x1002                  _Pointer_Entire_Flash_test
                     0x1006                  _TimerCounter100us
@@ -5659,104 +5707,118 @@ __c30_signature
                     0x1040                  _Time
                     0x1048                  _RTOS_50us_Seguencer
                     0x1049                  _RTOS_50us_Counter
-                    0x104a                  _Burst_To_CAN_Skipper
-                    0x104c                  _Debug_Flags
-                    0x104e                  _Mag_flag
-                    0x104f                  _Accel_unit
-                    0x1050                  _Accel_HG_Flag
-                    0x1051                  _Accel_HG_Sequencer
-                    0x1052                  _Burst_Trigger_Sample_Counter
-                    0x1053                  _ADC_MCP3422_Alt
-                    0x1054                  _Voltage_3V3
-                    0x1056                  _Voltage_5V
-                    0x1058                  _Avg_Voltage_5V_Pointer
-                    0x1059                  _Avg_Voltage_3V3_Pointer
-                    0x105a                  _Sum_Voltage_3V3
-                    0x105c                  _Sum_Voltage_5V
-                    0x105e                  _Avg_Voltage_5V
-                    0x1060                  _Avg_Voltage_3V3
-                    0x1062                  _Volt_5V_Flags
-                    0x1064                  _Volt_3V3_Flags
-                    0x1066                  _Gyro_value
-                    0x1068                  _Gyro_temp
-                    0x106a                  _Gyro_Vol_Ref_Unsigned
-                    0x106c                  _MT25QL01_bytes_pointer
-                    0x1070                  _MT25QL01_Read_bytes_pointer
-                    0x1074                  _MT25QL01_Erase_bytes_pointer
-                    0x1078                  _MT25QL01_Seek_bytes_pointer
-                    0x107c                  _MT25QL01_Seek_bytes_Start_Reference
-                    0x1080                  _MT25QL01_Seek_bytes_End_Reference
-                    0x1084                  _Memory_Search_Sequencer
-                    0x1086                  _MT25QL01_Flag
-                    0x1088                  _Tool_Face_phy_float
-                    0x108c                  _Tool_Face_Old_float
-                    0x1090                  _Tool_Face_Int32
-                    0x1094                  _Tool_Face_Old_Int32
-                    0x1098                  _NumberEventSaved
-                    0x109a                  _EventPointerBuffer
-                    0x109c                  _EventPointerWriting
-                    0x109e                  _MEM_CY15B064J_Write_bytes_pointer
-                    0x10a0                  _MEM_CY15B064J_Read_bytes_pointer
-                    0x10a2                  _MEM_CY15B064J_Seek_bytes_pointer
-                    0x10a4                  _MEM_CY15B064J_Flag
+                    0x104a                  _RTOS_Old_Value
+                    0x104c                  _RTOS_New_Value
+                    0x104e                  _RTOS_Time_Over
+                    0x1050                  _RTOS_Time_Under
+                    0x1052                  _Time_debug_Flag
+                    0x1053                  _Time_debug_counter
+                    0x1054                  _Burst_To_CAN_Skipper
+                    0x1056                  _Debug_Flags
+                    0x1058                  _Mag_flag
+                    0x1059                  _Accel_unit
+                    0x105a                  _Accel_HG_Flag
+                    0x105b                  _Accel_HG_Sequencer
+                    0x105c                  _Burst_Trigger_Sample_Counter
+                    0x105d                  _ADC_MCP3422_Alt
+                    0x105e                  _Voltage_3V3
+                    0x1060                  _Voltage_5V
+                    0x1062                  _Avg_Voltage_5V_Pointer
+                    0x1063                  _Avg_Voltage_3V3_Pointer
+                    0x1064                  _Sum_Voltage_3V3
+                    0x1066                  _Sum_Voltage_5V
+                    0x1068                  _Avg_Voltage_5V
+                    0x106a                  _Avg_Voltage_3V3
+                    0x106c                  _Volt_5V_Flags
+                    0x106e                  _Volt_3V3_Flags
+                    0x1070                  _Gyro_value
+                    0x1072                  _Gyro_temp
+                    0x1074                  _Gyro_Vol_Ref_Unsigned
+                    0x1076                  _MT25QL01_bytes_pointer
+                    0x107a                  _MT25QL01_Read_bytes_pointer
+                    0x107e                  _MT25QL01_Erase_bytes_pointer
+                    0x1082                  _MT25QL01_Seek_bytes_pointer
+                    0x1086                  _MT25QL01_Seek_bytes_Start_Reference
+                    0x108a                  _MT25QL01_Seek_bytes_End_Reference
+                    0x108e                  _Memory_Search_Sequencer
+                    0x1090                  _MT25QL01_Flag
+                    0x1092                  _Tool_Face_phy_float
+                    0x1096                  _Tool_Face_Old_float
+                    0x109a                  _Tool_Face_Int32
+                    0x109e                  _Tool_Face_Old_Int32
+                    0x10a2                  _Mag_Rotation_Det_Flags
+                    0x10a3                  _Mag_Rotation_Det_Array_Pointer
+                    0x10a4                  _Mag_Rotation_Det_Array_Error_Count
+                    0x10a5                  _Mag_Rotation_Det_Timeout_Counter
+                    0x10a6                  _Mag_Rotation_Det_Sample_UP_Counter
+                    0x10a7                  _Mag_Rotation_Det_Sample_Down_Counter
+                    0x10a8                  _Mag_Rotation_Det_Peak_Counter
+                    0x10a9                  _NumberEventSaved
+                    0x10aa                  _EventPointerBuffer
+                    0x10ac                  _EventPointerWriting
+                    0x10ae                  _MEM_CY15B064J_Write_bytes_pointer
+                    0x10b0                  _MEM_CY15B064J_Read_bytes_pointer
+                    0x10b2                  _MEM_CY15B064J_Seek_bytes_pointer
+                    0x10b4                  _MEM_CY15B064J_Flag
 
-.ndata              0x10a6          0xa
- .ndata             0x10a6          0xa build/default/production/_ext/1472/main.o
-                    0x10a6                  _MT25QL01_In_Used
-                    0x10a7                  _MT25QL01_Read_In_Used
-                    0x10a8                  _MT25QL01_Erase_In_Used
-                    0x10a9                  _MT25QL01_To_Erase
-                    0x10aa                  _MT25QL01_Seek_In_Used
-                    0x10ab                  _MEM_CY15B064J_Write_In_Used
-                    0x10ac                  _MEM_CY15B064J_Read_In_Used
-                    0x10ad                  _MEM_CY15B064J_Erase_In_Used
-                    0x10ae                  _MEM_CY15B064J_Seek_In_Used
+.ndata              0x10b6          0xa
+ .ndata             0x10b6          0xa build/default/production/_ext/1472/main.o
+                    0x10b6                  _MT25QL01_In_Used
+                    0x10b7                  _MT25QL01_Read_In_Used
+                    0x10b8                  _MT25QL01_Erase_In_Used
+                    0x10b9                  _MT25QL01_To_Erase
+                    0x10ba                  _MT25QL01_Seek_In_Used
+                    0x10bb                  _MEM_CY15B064J_Write_In_Used
+                    0x10bc                  _MEM_CY15B064J_Read_In_Used
+                    0x10bd                  _MEM_CY15B064J_Erase_In_Used
+                    0x10be                  _MEM_CY15B064J_Seek_In_Used
 
-.nbss               0x10b0          0x4
- .nbss              0x10b0          0x2 build/default/production/_ext/1472/Accel_ADXL355.o
-                    0x10b0                  _Accel_Flag
- .nbss              0x10b2          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
-                    0x10b2                  _errno
+.nbss               0x10c0          0x4
+ .nbss              0x10c0          0x2 build/default/production/_ext/1472/Accel_ADXL355.o
+                    0x10c0                  _Accel_Flag
+ .nbss              0x10c2          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(errno.CH_o)
+                    0x10c2                  _errno
 
-_0000000009CCE0A065b43124
-                    0x10b4       0x3000
- _0000000009CCE0A065b43124
-                    0x10b4       0x3000 build/default/production/_ext/1472/main.o
-                    0x10b4                  _Buffer_RAM_Before
+_0000000009CD10A065c4ee2b
+                    0x10c4       0x3000
+ _0000000009CD10A065c4ee2b
+                    0x10c4       0x3000 build/default/production/_ext/1472/main.o
+                    0x10c4                  _Buffer_RAM_Before
 
-_0000000009CCE14065b43124
-                    0x40b4       0x3000
- _0000000009CCE14065b43124
-                    0x40b4       0x3000 build/default/production/_ext/1472/main.o
-                    0x40b4                  _Buffer_RAM_After
+_0000000009CD114065c4ee2b
+                    0x40c4       0x3000
+ _0000000009CD114065c4ee2b
+                    0x40c4       0x3000 build/default/production/_ext/1472/main.o
+                    0x40c4                  _Buffer_RAM_After
 
-_00000000097985A065b43124
-                    0x70b4        0x800
- _00000000097985A065b43124
-                    0x70b4        0x800 build/default/production/_ext/1472/main.o
-                    0x70b4                  _MemoryEventBuffer
+_00000000097CD1E065c4ee2b
+                    0x70c4        0x800
+ _00000000097CD1E065c4ee2b
+                    0x70c4        0x800 build/default/production/_ext/1472/main.o
+                    0x70c4                  _MemoryEventBuffer
 
-_000000000956AD2065b3e9b8
-                    0x78b4        0x240
- _000000000956AD2065b3e9b8
-                    0x78b4        0x240 build/default/production/_ext/1472/CAN.o
-                    0x78b4                  _CanTxBuffer
+_0000000009414D2065c4ee2b
+                    0x78c4        0x240
+ _0000000009414D2065c4ee2b
+                    0x78c4        0x240 build/default/production/_ext/1472/CAN.o
+                    0x78c4                  _CanTxBuffer
 
-.bss                0x7af4         0x6a
- .bss               0x7af4         0x68 build/default/production/_ext/1472/main.o
-                    0x7af4                  _Buffer_Burst
-                    0x7b04                  _Uart_1_data_buffer
-                    0x7b14                  _Uart_1_data_Received
-                    0x7b24                  _State_Flags
-                    0x7b27                  _Magneto_Data
-                    0x7b2e                  _Accel_LG1_Data
-                    0x7b39                  _Accel_LG2_Data
-                    0x7b44                  _Accel_LG3_Data
-                    0x7b50                  _Burst_Flag
-                    0x7b52                  _Accel_HG_Max_Peak
-                    0x7b57                  _Accel_HG_Data
- .bss               0x7b5c          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.CH_o)
-                    0x7b5c                  ___errno_val
+.bss                0x7b04         0xba
+ .bss               0x7b04         0xb8 build/default/production/_ext/1472/main.o
+                    0x7b04                  _Buffer_Burst
+                    0x7b14                  _Uart_1_data_buffer
+                    0x7b24                  _Uart_1_data_Received
+                    0x7b34                  _State_Flags
+                    0x7b37                  _Magneto_Data
+                    0x7b3e                  _Accel_LG1_Data
+                    0x7b49                  _Accel_LG2_Data
+                    0x7b54                  _Accel_LG3_Data
+                    0x7b60                  _Burst_Flag
+                    0x7b62                  _Accel_HG_Max_Peak
+                    0x7b67                  _Accel_HG_Data
+                    0x7b6c                  _Mag_Rotation_Det_Array
+ .bss               0x7bbc          0x2 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a(__errno_location.CH_o)
+                    0x7bbc                  ___errno_val
 
 .config_IBSEQ     0x057ffc          0x2
  .config_IBSEQ    0x057ffc          0x2 build/default/production/_ext/1472/main.o
@@ -5871,8 +5933,8 @@ _000000000956AD2065b3e9b8
  .ivt._SoftTrapError
                   0x000010          0x2 build/default/production/_ext/1472/main.o
 
-.const              0x8e5a         0x28 load address 0x000e5a  
- .const             0x8e5a         0x28 build/default/production/_ext/1472/main.o
+.const              0x8e5a         0x2e load address 0x000e5a  
+ .const             0x8e5a         0x2e build/default/production/_ext/1472/main.o
                     0x8e5a                  _Heartbeat_max_count
                     0x8e5b                  _Boot_Timeout_max_count
                     0x8e5c                  _Time_Sync_max_count
@@ -5888,217 +5950,227 @@ _000000000956AD2065b3e9b8
                     0x8e6c                  _BurstBuffer256_Slice_Max
                     0x8e6e                  _BurstBuffer256_Pointer_Max
                     0x8e70                  _Uart_1_data_timeout_max_count
-                    0x8e71                  _MT25QL01_Number_Max
-                    0x8e72                  _MT25QL01_Sector_Max
-                    0x8e74                  _MT25QL01_bytes_Max
-                    0x8e78                  _NumberEventMax
-                    0x8e7a                  _EventPointerMax
-                    0x8e7c                  _MEM_CY15B064J_64_Slices_Max
-                    0x8e7e                  _MEM_CY15B064J_bytes_Max
-                    0x8e80                  _MEM_CY15B064J_Number_Max
+                    0x8e71                  _Time_debug_max_count
+                    0x8e72                  _MT25QL01_Number_Max
+                    0x8e74                  _MT25QL01_Sector_Max
+                    0x8e76                  _MT25QL01_bytes_Max
+                    0x8e7a                  _Mag_Rotation_Det_Timeout_Max_Count
+                    0x8e7b                  _Mag_Rotation_Det_Sample_UP_Max_Count
+                    0x8e7c                  _Mag_Rotation_Det_Sample_Down_Max_Count
+                    0x8e7d                  _Mag_Rotation_Det_Peak_Max_Count
+                    0x8e7e                  _NumberEventMax
+                    0x8e80                  _EventPointerMax
+                    0x8e82                  _MEM_CY15B064J_64_Slices_Max
+                    0x8e84                  _MEM_CY15B064J_bytes_Max
+                    0x8e86                  _MEM_CY15B064J_Number_Max
 
-.dinit            0x000e82       0x4046
- .dinit           0x000e82       0x4046 data_init
+.dinit            0x000e88       0x4046
+ .dinit           0x000e88       0x4046 data_init
 
-.text             0x004ec8       0x6e9c
- .text            0x004ec8       0x216c build/default/production/_ext/1472/main.o
-                  0x004ec8                  _main
-                  0x00507c                  _Get_Version_Firmware
-                  0x0050ae                  _IO_Ports_Setting
-                  0x0050b4                  _State_Machine_Reset
-                  0x0050ea                  _Init_Idle_State
-                  0x005108                  _Init_Drill_State
-                  0x0051d8                  _Disabled_All_Sensors
-                  0x005200                  _Fill_Data_Array
-                  0x005236                  _Save_To_RAM
-                  0x005240                  _Get_Voltage_3V3_5V
-                  0x00531a                  _Voltage_5V_Level_Check
-                  0x005360                  _Voltage_3V3_Level_Check
-                  0x00538a                  _Set_Burst_Array
-                  0x0055a4                  _Set_Burst_Writing
-                  0x00567e                  _Save_Super_Burst
-                  0x005686                  _RTOS_50us_Routine_250Hz
-                  0x005944                  _RTOS_50us_Routine_125Hz
-                  0x005f54                  _Fill_Array_For_Writing
-                  0x00651e                  _Write_To_Memory
-                  0x00658a                  _Read_Memory
-                  0x006590                  _Save_Event_Buffer
-                  0x006654                  _Save_Event_Cmd_Buffer
-                  0x006708                  _Write_Event_I2C_Mem
-                  0x00678e                  _Time_Sync
-                  0x00691e                  _Test_Calc_TF
-                  0x006aec                  _Calculation_TF
-                  0x006fc2                  _Read_Sensors
-                  0x006fc8                  _Start_Timer_3
-                  0x006ff0                  _Check_Timer_3
-                  0x007006                  _Stop_Timer_3
-                  0x00700e                  _Multiplication
-                  0x007022                  _Go_To_Sleep
-                  0x00702e                  _Wake_up_Fx
- .text            0x007034       0x1a92 build/default/production/_ext/1472/CAN.o
-                  0x007034                  _init_CAN_1
-                  0x0070fc                  _CAN_Send_MSG
-                  0x0072a2                  _CAN_Received_To_Uart
-                  0x0072d6                  _can_rec
-                  0x007430                  _CAN_Decode_Received
-                  0x00899e                  _CAN_Encode_Sending
- .text            0x008ac6       0x12f6 build/default/production/_ext/1472/MEM_MT25QL01.o
-                  0x008ac6                  _MEM_MT25QL01_Init
-                  0x008b38                  _MEM_MT25QL01_Read_ID
-                  0x008b58                  _MEM_MT25QL01_Enter_4_Bytes_Mode
-                  0x008b76                  _MEM_MT25QL01_Enter_Deep_Power_Down
-                  0x008b94                  _MEM_MT25QL01_Release_Deep_Power_Down
-                  0x008bb4                  _MEM_MT25QL01_Get_Status
-                  0x008bdc                  _MEM_MT25QL01_Get_Flag
-                  0x008bf2                  _MEM_MT25QL01_Read_Freeze_Bit
-                  0x008c08                  _MEM_MT25QL01_Writing_Swap
-                  0x008c54                  _MEM_MT25QL01_Write_Bytes
-                  0x008de4                  _MEM_MT25QL01_Write_Enable
-                  0x008dfa                  _MEM_MT25QL01_Write_Disable
-                  0x008e10                  _MEM_MT25QL01_Get_Mem_Write_Pointer
-                  0x008e58                  _MEM_MT25QL01_Set_Mem_Write_Pointer
-                  0x008ee2                  _MEM_MT25QL01_Get_Mem_Read_Pointer
-                  0x008f2a                  _MEM_MT25QL01_Set_Mem_Read_Pointer
-                  0x008fb4                  _MEM_MT25QL01_Init_Read
-                  0x008fc6                  _MEM_MT25QL01_Reading_Swap
-                  0x008fd8                  _MEM_MT25QL01_Read_Bytes
-                  0x0090da                  _MEM_MT25QL01_End_Read
-                  0x0090e6                  _MEM_MT25QL01_Erase_Memory_Init
-                  0x0090f4                  _MEM_MT25QL01_Erase_Memory_Swap
-                  0x0090fc                  _MEM_MT25QL01_Erase_Memory
-                  0x009306                  _MEM_MT25QL01_Pointer_Seaching
-                  0x009caa                  _MEM_MT25QL01_Check_Status_Sleep
-                  0x009ce2                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
-                  0x009d20                  _MEM_MT25QL01_Wake_UP_All_Memory
-                  0x009d5e                  _MEM_MT25QL01_Shutdowm_All_Memory
- .text            0x009dbc        0xaa0 build/default/production/_ext/1472/Accel_ADXL373.o
-                  0x009dbc                  _ADXL373_SPI_Init
-                  0x009e12                  _ADXL373_SPI_Init_Wake_Up_Mode
-                  0x009ed4                  _ADXL373_SPI_Init_Instant_On_Impact
-                  0x009f14                  _ADXL373_SPI_ID
-                  0x009f30                  _ADXL373_SPI_Start_Sensor
-                  0x009f48                  _ADXL373_SPI_Stop_Sensor
-                  0x009f60                  _ADXL373_Shift_Data
-                  0x009fca                  _ADXL373_SPI_Get_Data
-                  0x009fe8                  _ADXL373_SPI_Format_Level
-                  0x00a094                  _ADXL373_SPI_Check_Level
-                  0x00a7c8                  _ADXL373_SPI_Get_Register
-                  0x00a7e6                  _ADXL373_SPI_Get_Interrupt
-                  0x00a7fa                  _ADXL373_SPI_Get_Max_Peak
-                  0x00a832                  _ADXL373_Check_Fifo_Full
-                  0x00a850                  _ADXL373_Read_Fifo
- .text            0x00a85c        0x5d4 build/default/production/_ext/1472/Uart.o
-                  0x00a85c                  _init_uart_1
-                  0x00a886                  _init_uart_1_DMA
-                  0x00a8b8                  _write_uart_1
-                  0x00a8ce                  _write_string_uart_1
-                  0x00a8f2                  _read_uart_1
-                  0x00a986                  _reset_uart_1_registers
-                  0x00a9b6                  _decode_uart_1_message
-                  0x00ab46                  _uart_1_send_message
-                  0x00ac68                  _uart_1_send_message_timed
-                  0x00ac74                  _GetChar
-                  0x00acae                  _init_uart_2
-                  0x00acd8                  _init_uart_2_DMA
-                  0x00ad0a                  _write_uart_2
-                  0x00ad20                  _write_string_uart_2
-                  0x00ad44                  _Dtect_MWD_Msg_Decoding
-                  0x00adce                  _init_uart_3
-                  0x00adf6                  _write_uart_3
-                  0x00ae0c                  _write_string_uart_3
- .text            0x00ae30        0x3f0 build/default/production/_ext/1472/Init.o
-                  0x00ae30                  _initialize_mcu
-                  0x00ae88                  _init_interrupt
-                  0x00aec6                  _set_interrupt_Enable
-                  0x00aece                  _init_port
-                  0x00afac                  _init_sleep
-                  0x00afb8                  _Enable_Sleep_Interrupt
-                  0x00afc6                  _Disable_Sleep_Interrupt
-                  0x00afd6                  _init_osc_External
-                  0x00b038                  _init_osc_Internal
-                  0x00b08e                  _init_clock_switching
-                  0x00b094                  _clock_switching
-                  0x00b09a                  _init_timer_1
-                  0x00b0be                  _init_timer_2
-                  0x00b0ea                  _init_timer_3
-                  0x00b120                  _init_timer_4
-                  0x00b15a                  _start_timer_4
-                  0x00b166                  _stop_timer_4
-                  0x00b170                  _init_ref_clock
-                  0x00b1aa                  _CLC_config
-                  0x00b1ca                  _init_watch_dog
-                  0x00b1fa                  _start_watch_dog
-                  0x00b202                  _stop_watch_dog
-                  0x00b20a                  _init_Dead_Man_timer
-                  0x00b212                  _Reset_Dead_Man_timer
- .text            0x00b220        0x3b4 build/default/production/_ext/1472/SPI.o
-                  0x00b220                  _init_SPI_1
-                  0x00b246                  _init_SPI_2
-                  0x00b26c                  _init_SPI_3
-                  0x00b292                  _init_SPI_2_slave
-                  0x00b2be                  _set_SS_Accel
-                  0x00b2ca                  _disable_SS_Accel
-                  0x00b2d6                  _SPI_1_Write
-                  0x00b2ee                  _SPI_2_Write
-                  0x00b306                  _SPI_3_Write
-                  0x00b31e                  _SPI_2_Write_Slave
-                  0x00b338                  _SPI_1_Routine
-                  0x00b3a2                  _SPI_2_Routine
-                  0x00b40c                  _SPI_3_Routine
-                  0x00b476                  _read_SPI_2_Slave
-                  0x00b47e                  _reset_SPI_2_registers
-                  0x00b484                  _decode_SPI_2_message
-                  0x00b48a                  _SPI_2_send_message
-                  0x00b496                  _SPI_1_Routine_Read
-                  0x00b500                  _SPI_2_Routine_Read
-                  0x00b56a                  _SPI_3_Routine_Read
- .text            0x00b5d4        0x1d2 build/default/production/_ext/1472/ADC_ADS863x.o
-                  0x00b5d4                  _SET_ADC_ADS863x_POWER_UP
-                  0x00b5f4                  _Get_ADC_ADS863x_AUX_CONFIG
-                  0x00b628                  _SET_ADC_ADS863x_AUX_CONFIG
-                  0x00b648                  _SET_ADC_ADS863x_RANGE
-                  0x00b6b0                  _Get_ADC_ADS863x_RANGE
-                  0x00b6e4                  _SET_ADC_ADS863x_PAGE
-                  0x00b712                  _ADC_ADS863x_READ_DATA
- .text            0x00b7a6        0x1be build/default/production/_ext/1472/Accel_ADXL355.o
-                  0x00b7a6                  _ADXL355_SPI_Init
-                  0x00b7ac                  _Get_Accel_Device_ID
-                  0x00b7c8                  _ADXL355_SPI_Read_Accel_Device_Register
-                  0x00b7ec                  _ADXL355_SPI_Write_Accel_Device_Register
-                  0x00b80e                  _ADXL355_SPI_Start_Sensor
-                  0x00b84c                  _ADXL355_SPI_Stop_Sensor
-                  0x00b884                  _ADXL355_SPI_Get_Data
-                  0x00b8a4                  _ADXL355_Multiple_Reading
-                  0x00b8ae                  _ADXL355_Read_Fifo
-                  0x00b8ba                  _ADXL355_Get_Streaming
-                  0x00b8c6                  _ADXL355_Set_Streaming
-                  0x00b8da                  _ADXL355_Data_Scan
-                  0x00b8e4                  _ADXL355_Acceleration_Data_Conversion
-                  0x00b95c                  _ADXL355_Get_Data
- .text            0x00b964        0x18c build/default/production/_ext/1472/ADC_ADS868x.o
-                  0x00b964                  _Get_ADC_ADS868x_Device_ID
-                  0x00b990                  _SET_ADC_ADS868x_Device_ID
-                  0x00b9be                  _SET_ADC_ADS868x_RANGE
-                  0x00b9ee                  _Get_ADC_ADS868x_RANGE
-                  0x00ba2c                  _SET_ALARM_H_TH_REG
-                  0x00ba5c                  _GET_ALARM_H_TH_REG
-                  0x00ba94                  _ADC_ADS868x_READ_DATA
-                  0x00bac4                  _SET_ADC_ADS868x_DATAOUT_CTL
- .text            0x00baf0         0xd2 build/default/production/_ext/1472/CRC.o
-                  0x00baf0                  _CRC_Init
-                  0x00bb24                  _CRC_ChecksumByte
- .text            0x00bbc2         0xa8 build/default/production/_ext/1472/MUX1_ADG732.o
-                  0x00bbc2                  _MUX1_ADG732_INIT
-                  0x00bbf2                  _MUX1_ADG732_CHIP_SELECT
-                  0x00bc60                  _MUX1_ADG732_CHIP_DESELECT
- .text            0x00bc6a         0x96 build/default/production/_ext/1472/DMA.o
-                  0x00bc6a                  _Init_DMA
-                  0x00bc7c                  _DMA_Channel_0
-                  0x00bcba                  _DMA_Channel_1
-                  0x00bcfa                  _DMA_Channel_2
- .text            0x00bd00         0x64 build/default/production/_ext/1472/MAG_MMC5983MA.o
-                  0x00bd00                  _init_MAG_MMC5983MA
-                  0x00bd06                  _MAG_MMC5983MA_read_ID
-                  0x00bd20                  _MAG_MMC5983MA_Get_data
-                  0x00bd26                  _MAG_MMC5983MA_Write_data_SPI
-                  0x00bd44                  _MAG_MMC5983MA_Get_data_SPI
+.text             0x004ece       0x6f88
+ .text            0x004ece       0x2226 build/default/production/_ext/1472/main.o
+                  0x004ece                  _main
+                  0x00509e                  _Get_Version_Firmware
+                  0x0050d0                  _IO_Ports_Setting
+                  0x0050d6                  _State_Machine_Reset
+                  0x00510c                  _Init_Idle_State
+                  0x00512a                  _Init_Drill_State
+                  0x0051ee                  _Disabled_All_Sensors
+                  0x005202                  _Fill_Data_Array
+                  0x005238                  _Save_To_RAM
+                  0x005242                  _Get_Voltage_3V3_5V
+                  0x00531c                  _Voltage_5V_Level_Check
+                  0x005358                  _Voltage_3V3_Level_Check
+                  0x00537c                  _Set_Burst_Array
+                  0x005596                  _Set_Burst_Writing
+                  0x005670                  _Save_Super_Burst
+                  0x005678                  _RTOS_50us_Routine_250Hz
+                  0x005956                  _RTOS_50us_Routine_125Hz
+                  0x005f5e                  _Time_Adjustment
+                  0x005fea                  _Fill_Array_For_Writing
+                  0x0065b4                  _Mag_Rotation_Det_Routine
+                  0x0065be                  _Mag_Rotation_Det_Reset
+                  0x0065de                  _Write_To_Memory
+                  0x00664a                  _Read_Memory
+                  0x006650                  _Save_Event_Buffer
+                  0x006714                  _Save_Event_Cmd_Buffer
+                  0x0067c8                  _Write_Event_I2C_Mem
+                  0x00684e                  _Time_Sync
+                  0x0069de                  _Test_Calc_TF
+                  0x006bac                  _Calculation_TF
+                  0x007082                  _Read_Sensors
+                  0x007088                  _Start_Timer_3
+                  0x0070b0                  _Check_Timer_3
+                  0x0070c6                  _Stop_Timer_3
+                  0x0070ce                  _Multiplication
+                  0x0070e2                  _Go_To_Sleep
+                  0x0070ee                  _Wake_up_Fx
+ .text            0x0070f4       0x1a98 build/default/production/_ext/1472/CAN.o
+                  0x0070f4                  _init_CAN_1
+                  0x0071bc                  _CAN_Send_MSG
+                  0x007362                  _CAN_Received_To_Uart
+                  0x007396                  _can_rec
+                  0x0074f0                  _CAN_Decode_Received
+                  0x008a64                  _CAN_Encode_Sending
+ .text            0x008b8c       0x12f6 build/default/production/_ext/1472/MEM_MT25QL01.o
+                  0x008b8c                  _MEM_MT25QL01_Init
+                  0x008bfe                  _MEM_MT25QL01_Read_ID
+                  0x008c1e                  _MEM_MT25QL01_Enter_4_Bytes_Mode
+                  0x008c3c                  _MEM_MT25QL01_Enter_Deep_Power_Down
+                  0x008c5a                  _MEM_MT25QL01_Release_Deep_Power_Down
+                  0x008c7a                  _MEM_MT25QL01_Get_Status
+                  0x008ca2                  _MEM_MT25QL01_Get_Flag
+                  0x008cb8                  _MEM_MT25QL01_Read_Freeze_Bit
+                  0x008cce                  _MEM_MT25QL01_Writing_Swap
+                  0x008d1a                  _MEM_MT25QL01_Write_Bytes
+                  0x008eaa                  _MEM_MT25QL01_Write_Enable
+                  0x008ec0                  _MEM_MT25QL01_Write_Disable
+                  0x008ed6                  _MEM_MT25QL01_Get_Mem_Write_Pointer
+                  0x008f1e                  _MEM_MT25QL01_Set_Mem_Write_Pointer
+                  0x008fa8                  _MEM_MT25QL01_Get_Mem_Read_Pointer
+                  0x008ff0                  _MEM_MT25QL01_Set_Mem_Read_Pointer
+                  0x00907a                  _MEM_MT25QL01_Init_Read
+                  0x00908c                  _MEM_MT25QL01_Reading_Swap
+                  0x00909e                  _MEM_MT25QL01_Read_Bytes
+                  0x0091a0                  _MEM_MT25QL01_End_Read
+                  0x0091ac                  _MEM_MT25QL01_Erase_Memory_Init
+                  0x0091ba                  _MEM_MT25QL01_Erase_Memory_Swap
+                  0x0091c2                  _MEM_MT25QL01_Erase_Memory
+                  0x0093cc                  _MEM_MT25QL01_Pointer_Seaching
+                  0x009d70                  _MEM_MT25QL01_Check_Status_Sleep
+                  0x009da8                  _MEM_MT25QL01_Set_Sleep_Unused_ATM
+                  0x009de6                  _MEM_MT25QL01_Wake_UP_All_Memory
+                  0x009e24                  _MEM_MT25QL01_Shutdowm_All_Memory
+ .text            0x009e82        0xaa0 build/default/production/_ext/1472/Accel_ADXL373.o
+                  0x009e82                  _ADXL373_SPI_Init
+                  0x009ed8                  _ADXL373_SPI_Init_Wake_Up_Mode
+                  0x009f9a                  _ADXL373_SPI_Init_Instant_On_Impact
+                  0x009fda                  _ADXL373_SPI_ID
+                  0x009ff6                  _ADXL373_SPI_Start_Sensor
+                  0x00a00e                  _ADXL373_SPI_Stop_Sensor
+                  0x00a026                  _ADXL373_Shift_Data
+                  0x00a090                  _ADXL373_SPI_Get_Data
+                  0x00a0ae                  _ADXL373_SPI_Format_Level
+                  0x00a15a                  _ADXL373_SPI_Check_Level
+                  0x00a88e                  _ADXL373_SPI_Get_Register
+                  0x00a8ac                  _ADXL373_SPI_Get_Interrupt
+                  0x00a8c0                  _ADXL373_SPI_Get_Max_Peak
+                  0x00a8f8                  _ADXL373_Check_Fifo_Full
+                  0x00a916                  _ADXL373_Read_Fifo
+ .text            0x00a922        0x5d4 build/default/production/_ext/1472/Uart.o
+                  0x00a922                  _init_uart_1
+                  0x00a94c                  _init_uart_1_DMA
+                  0x00a97e                  _write_uart_1
+                  0x00a994                  _write_string_uart_1
+                  0x00a9b8                  _read_uart_1
+                  0x00aa4c                  _reset_uart_1_registers
+                  0x00aa7c                  _decode_uart_1_message
+                  0x00ac0c                  _uart_1_send_message
+                  0x00ad2e                  _uart_1_send_message_timed
+                  0x00ad3a                  _GetChar
+                  0x00ad74                  _init_uart_2
+                  0x00ad9e                  _init_uart_2_DMA
+                  0x00add0                  _write_uart_2
+                  0x00ade6                  _write_string_uart_2
+                  0x00ae0a                  _Dtect_MWD_Msg_Decoding
+                  0x00ae94                  _init_uart_3
+                  0x00aebc                  _write_uart_3
+                  0x00aed2                  _write_string_uart_3
+ .text            0x00aef6        0x3f0 build/default/production/_ext/1472/Init.o
+                  0x00aef6                  _initialize_mcu
+                  0x00af4e                  _init_interrupt
+                  0x00af8c                  _set_interrupt_Enable
+                  0x00af94                  _init_port
+                  0x00b072                  _init_sleep
+                  0x00b07e                  _Enable_Sleep_Interrupt
+                  0x00b08c                  _Disable_Sleep_Interrupt
+                  0x00b09c                  _init_osc_External
+                  0x00b0fe                  _init_osc_Internal
+                  0x00b154                  _init_clock_switching
+                  0x00b15a                  _clock_switching
+                  0x00b160                  _init_timer_1
+                  0x00b184                  _init_timer_2
+                  0x00b1b0                  _init_timer_3
+                  0x00b1e6                  _init_timer_4
+                  0x00b220                  _start_timer_4
+                  0x00b22c                  _stop_timer_4
+                  0x00b236                  _init_ref_clock
+                  0x00b270                  _CLC_config
+                  0x00b290                  _init_watch_dog
+                  0x00b2c0                  _start_watch_dog
+                  0x00b2c8                  _stop_watch_dog
+                  0x00b2d0                  _init_Dead_Man_timer
+                  0x00b2d8                  _Reset_Dead_Man_timer
+ .text            0x00b2e6        0x3b4 build/default/production/_ext/1472/SPI.o
+                  0x00b2e6                  _init_SPI_1
+                  0x00b30c                  _init_SPI_2
+                  0x00b332                  _init_SPI_3
+                  0x00b358                  _init_SPI_2_slave
+                  0x00b384                  _set_SS_Accel
+                  0x00b390                  _disable_SS_Accel
+                  0x00b39c                  _SPI_1_Write
+                  0x00b3b4                  _SPI_2_Write
+                  0x00b3cc                  _SPI_3_Write
+                  0x00b3e4                  _SPI_2_Write_Slave
+                  0x00b3fe                  _SPI_1_Routine
+                  0x00b468                  _SPI_2_Routine
+                  0x00b4d2                  _SPI_3_Routine
+                  0x00b53c                  _read_SPI_2_Slave
+                  0x00b544                  _reset_SPI_2_registers
+                  0x00b54a                  _decode_SPI_2_message
+                  0x00b550                  _SPI_2_send_message
+                  0x00b55c                  _SPI_1_Routine_Read
+                  0x00b5c6                  _SPI_2_Routine_Read
+                  0x00b630                  _SPI_3_Routine_Read
+ .text            0x00b69a        0x1d2 build/default/production/_ext/1472/ADC_ADS863x.o
+                  0x00b69a                  _SET_ADC_ADS863x_POWER_UP
+                  0x00b6ba                  _Get_ADC_ADS863x_AUX_CONFIG
+                  0x00b6ee                  _SET_ADC_ADS863x_AUX_CONFIG
+                  0x00b70e                  _SET_ADC_ADS863x_RANGE
+                  0x00b776                  _Get_ADC_ADS863x_RANGE
+                  0x00b7aa                  _SET_ADC_ADS863x_PAGE
+                  0x00b7d8                  _ADC_ADS863x_READ_DATA
+ .text            0x00b86c        0x1be build/default/production/_ext/1472/Accel_ADXL355.o
+                  0x00b86c                  _ADXL355_SPI_Init
+                  0x00b872                  _Get_Accel_Device_ID
+                  0x00b88e                  _ADXL355_SPI_Read_Accel_Device_Register
+                  0x00b8b2                  _ADXL355_SPI_Write_Accel_Device_Register
+                  0x00b8d4                  _ADXL355_SPI_Start_Sensor
+                  0x00b912                  _ADXL355_SPI_Stop_Sensor
+                  0x00b94a                  _ADXL355_SPI_Get_Data
+                  0x00b96a                  _ADXL355_Multiple_Reading
+                  0x00b974                  _ADXL355_Read_Fifo
+                  0x00b980                  _ADXL355_Get_Streaming
+                  0x00b98c                  _ADXL355_Set_Streaming
+                  0x00b9a0                  _ADXL355_Data_Scan
+                  0x00b9aa                  _ADXL355_Acceleration_Data_Conversion
+                  0x00ba22                  _ADXL355_Get_Data
+ .text            0x00ba2a        0x18c build/default/production/_ext/1472/ADC_ADS868x.o
+                  0x00ba2a                  _Get_ADC_ADS868x_Device_ID
+                  0x00ba56                  _SET_ADC_ADS868x_Device_ID
+                  0x00ba84                  _SET_ADC_ADS868x_RANGE
+                  0x00bab4                  _Get_ADC_ADS868x_RANGE
+                  0x00baf2                  _SET_ALARM_H_TH_REG
+                  0x00bb22                  _GET_ALARM_H_TH_REG
+                  0x00bb5a                  _ADC_ADS868x_READ_DATA
+                  0x00bb8a                  _SET_ADC_ADS868x_DATAOUT_CTL
+ .text            0x00bbb6         0xd2 build/default/production/_ext/1472/CRC.o
+                  0x00bbb6                  _CRC_Init
+                  0x00bbea                  _CRC_ChecksumByte
+ .text            0x00bc88         0xa8 build/default/production/_ext/1472/MUX1_ADG732.o
+                  0x00bc88                  _MUX1_ADG732_INIT
+                  0x00bcb8                  _MUX1_ADG732_CHIP_SELECT
+                  0x00bd26                  _MUX1_ADG732_CHIP_DESELECT
+ .text            0x00bd30         0x96 build/default/production/_ext/1472/DMA.o
+                  0x00bd30                  _Init_DMA
+                  0x00bd42                  _DMA_Channel_0
+                  0x00bd80                  _DMA_Channel_1
+                  0x00bdc0                  _DMA_Channel_2
+ .text            0x00bdc6         0x90 build/default/production/_ext/1472/MAG_MMC5983MA.o
+                  0x00bdc6                  _init_MAG_MMC5983MA
+                  0x00bdcc                  _MAG_MMC5983MA_read_ID
+                  0x00bde6                  _MAG_MMC5983MA_Get_data
+                  0x00bdec                  _MAG_MMC5983MA_Write_data_SPI
+                  0x00be0a                  _MAG_MMC5983MA_Get_data_SPI
+                  0x00be2a                  _MAG_MMC5983MA_Set_Sampling_Continuous
+                  0x00be42                  _MAG_MMC5983MA_Disable_Sampling_Continuous

@@ -88,7 +88,7 @@ void MAG_MMC5983MA_Write_data_SPI(uint8_t *buffer, uint8_t data_len)
     buffer[0] = buffer[0] | MMC5983MA_Write_Bit;    // CMD
     data_read = SPI_3_Routine(SPI_CS_MAG, buffer, data_len, 0);
     // data_read = SPI_1_Routine(SPI_CS_MAG, cmd_buffer, 1, 1); 
-    return data_read; 
+    //return data_read; 
 
 }
 
@@ -111,4 +111,37 @@ uint8_t MAG_MMC5983MA_Get_data_SPI(uint8_t *buffer, uint8_t data_len)
     // data_read = SPI_1_Routine(SPI_CS_MAG, cmd_buffer, 1, 1); 
     return data_read; 
 
+}
+
+/*******************************************************************************
+ * Function: 
+ * Parameters: none
+ * Return: none
+ * Description: 
+ ******************************************************************************/
+void MAG_MMC5983MA_Set_Sampling_Continuous(void)
+{
+    //uint8_t data_ID; 
+    uint8_t buffer[3];
+    buffer[0] = 0x0A; // Internal CTL 1 address
+    buffer[1] = 0x03; // Internal CTL 1 value: Measurement Time 2MS
+    buffer[1] = 0x0F; // Internal CTL 2 value: 1000Hz
+    MAG_MMC5983MA_Write_data_SPI(buffer, 3); 
+    //return data_ID; 
+}
+
+/*******************************************************************************
+ * Function: 
+ * Parameters: none
+ * Return: none
+ * Description: 
+ ******************************************************************************/
+void MAG_MMC5983MA_Disable_Sampling_Continuous(void)
+{
+    //uint8_t data_ID; 
+    uint8_t buffer[2];
+    buffer[0] = 0x0B; // Internal CTL 2 address
+    buffer[1] = 0x00; // Internal CTL 2 value: 1000Hz
+    MAG_MMC5983MA_Write_data_SPI(buffer, 2); 
+    //return data_ID; 
 }

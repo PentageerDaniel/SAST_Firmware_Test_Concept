@@ -235,6 +235,21 @@ uint8_t RTOS_50us_Seguencer = 0;
 
 uint8_t RTOS_50us_Counter = 0; 
 
+uint16_t RTOS_Old_Value = 0; 
+uint16_t RTOS_New_Value = 0; 
+uint16_t RTOS_Time_Over = 0; 
+uint16_t RTOS_Time_Under = 0;
+
+// Calculation:
+// 1000 + RTOS_New_Value - RTOS_Old_Value == Time
+//
+
+
+uint8_t Time_debug_Flag = 0; 
+
+const uint8_t Time_debug_max_count = 200; 
+uint8_t Time_debug_counter = 0; 
+
 /*******************************************************************************
  * debug
  ******************************************************************************/
@@ -679,6 +694,49 @@ double Tool_Face_phy_float = 0;
 double Tool_Face_Old_float = 0;
 int32_t Tool_Face_Int32 = 0;
 int32_t Tool_Face_Old_Int32 = 0;
+
+/*******************************************************************************
+ * Magnetometer rotation detection
+ ******************************************************************************/
+struct {
+    uint8_t Reset : 1;
+    uint8_t Slope_Up_Search_Init : 1;
+    uint8_t Slope_Up_Search : 1;
+    uint8_t Peak_Search_Init : 1;
+    uint8_t Peak_Search : 1;
+    uint8_t Slope_Down_Search_Init : 1;
+    uint8_t Slope_Down_Search : 1;
+    uint8_t Array_Filled : 1;
+}Mag_Rotation_Det_Flags;
+
+
+#define Mag_Rotation_Det_Number_Sample  40
+
+#define Mag_Rotation_Det_Number_Error  8 
+
+#define Mag_Rotation_Det_Number_Valid  20
+
+uint16_t Mag_Rotation_Det_Array[Mag_Rotation_Det_Number_Sample] = {0};
+
+uint8_t Mag_Rotation_Det_Array_Pointer = 0; 
+
+uint8_t Mag_Rotation_Det_Array_Error_Count = 0; 
+
+const uint8_t Mag_Rotation_Det_Timeout_Max_Count = 40; 
+uint8_t Mag_Rotation_Det_Timeout_Counter = 0; 
+
+const uint8_t Mag_Rotation_Det_Sample_UP_Max_Count = 40; 
+uint8_t Mag_Rotation_Det_Sample_UP_Counter = 0; 
+
+const uint8_t Mag_Rotation_Det_Sample_Down_Max_Count = 40; 
+uint8_t Mag_Rotation_Det_Sample_Down_Counter = 0; 
+
+const uint8_t Mag_Rotation_Det_Peak_Max_Count = 40; 
+uint8_t Mag_Rotation_Det_Peak_Counter = 0; 
+
+//const uint8_t Mag_Rotation_Det_Peak_Max_Count = 40; 
+//uint8_t Mag_Rotation_Det_Peak_Counter = 0; 
+
 
 /*******************************************************************************
  * Memory Event  - MEM_CY15B064J

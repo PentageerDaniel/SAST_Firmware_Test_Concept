@@ -279,6 +279,13 @@ void Time_Sync(void);
 int32_t Multiplication(int x, int y); 
 signed long __builtin_mulss(const signed int p0, const signed int p1);
 
+
+void Mag_Rotation_Det_Routine(uint8_t mag_data_MSB,uint8_t mag_data_LSB);
+void Mag_Rotation_Det_Reset(void);
+
+
+void Time_Adjustment(void); 
+
 //void Init(void); 
 //void PutChar(unsigned char);
 //void GetChar(void);
@@ -415,6 +422,8 @@ extern uint8_t MAG_MMC5983MA_read_ID(void);
 extern void MAG_MMC5983MA_Get_data(void); 
 extern void MAG_MMC5983MA_Write_data_SPI(uint8_t *buffer, uint8_t data_len); 
 extern uint8_t MAG_MMC5983MA_Get_data_SPI(uint8_t *buffer, uint8_t data_len);
+extern void MAG_MMC5983MA_Set_Sampling_Continuous(void);
+extern void MAG_MMC5983MA_Disable_Sampling_Continuous(void);
 
 extern void Init_DMA(void); 
 extern void DMA_Channel_0(void); 

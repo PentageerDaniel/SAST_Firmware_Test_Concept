@@ -2029,7 +2029,7 @@ void MEM_MT25QL01_Set_Sleep_Unused_ATM(uint8_t memory_in_used)
  ******************************************************************************/
 void MEM_MT25QL01_Wake_UP_All_Memory(void)
 {
-    uint8_t buffer[20]; 
+    //uint8_t buffer[20]; 
     //uint8_t memory_error = 0xFF;
     //uint8_t memory_asleep = 0;
     //uint8_t status;

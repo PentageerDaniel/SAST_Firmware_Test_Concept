@@ -263,8 +263,8 @@ Initial code
 int main(void)
 {
     uint8_t buffer[32] = {0x00}; 
-    uint8_t cmd_buffer[2] = {0x00}; 
-    uint8_t test = 0;
+    //uint8_t cmd_buffer[2] = {0x00}; 
+    //uint8_t test = 0;
 //    int16_t accel_X_HG = -100;
 //    int16_t accel_Y_HG = 0xFF9C; // -100
 //    int16_t accel_Z_HG = 2500;
@@ -272,8 +272,8 @@ int main(void)
 //    int32_t result_Y2 = 0;
 //    int32_t result_Z2 = 0;
 //    uint32_t sum_accel_axis_HG = 0;
-    uint16_t timeout_DEBUG = 0;
-    uint16_t i = 0; 
+    //uint16_t timeout_DEBUG = 0;
+    //uint16_t i = 0; 
     //uint8_t buffer[3] = {0x01,0x02,0x03}; 
     
     // need to add delay
@@ -295,11 +295,11 @@ int main(void)
     Time.miliseconds = 0x0000;
     /////////////////////////////////////////////////////
     
-    //Debug_PIN_TX1 = 1;
+
     
     //IO_Ports_Setting(); 
     
-    //Debug_PIN_TX1 = 0;
+
     I2C_Errors_Counter = 0; 
     
     CS_CONT = 0; 
@@ -350,6 +350,20 @@ int main(void)
             
             if(State_Flags.Idle_State == 1)
             {
+
+            }
+            
+            
+            Time_debug_counter++;
+            if(Time_debug_counter >= Time_debug_max_count)
+            {
+                Time_debug_counter = 0; 
+                 
+                RTOS_New_Value = Time.miliseconds; 
+                
+                Time_Adjustment();
+                
+                RTOS_Old_Value = Time.miliseconds;
 
             }
             
@@ -405,7 +419,7 @@ int main(void)
                 
                 if(Init_Flag)
                 {
-                    //Debug_PIN_TX1 = !Debug_PIN_TX1;
+
                     
                     if(MT25QL01_Flag.Mem_Erase == 1)
                     {
@@ -435,10 +449,10 @@ int main(void)
                     //////////////////////////////////////////////////////////
                     //State_Flags.Mem_Event_Pointer_Seek = 0;
                     //State_Flags.Mem_Data_Pointer_Seek = 0; 
-//                    if(State_Flags.Mem_Data_Pointer_Seek == 1)
-//                    {
-//                        MEM_MT25QL01_Pointer_Seaching(); 
-//                    }
+                    if(State_Flags.Mem_Data_Pointer_Seek == 1)
+                    {
+                        MEM_MT25QL01_Pointer_Seaching(); 
+                    }
 //                    
 //                    if(State_Flags.Mem_Data_Pointer_Seek == 0 &&
 //                       State_Flags.Mem_Event_Pointer_Seek == 1)
@@ -472,11 +486,11 @@ int main(void)
                 //PORTCbits.RC12 = !PORTCbits.RC12; // CS_MEM2
                 if(Init_Flag)
                 {
-                    //Debug_PIN_TX1 = !Debug_PIN_TX1;
+
                     
                     if(State_Flags.Idle_State == 1)
                     {
-                        //Debug_PIN_TX1 = !Debug_PIN_TX1;
+
                         
                         //Get_Voltage_3V3_5V();
                         
@@ -503,7 +517,6 @@ int main(void)
                     if((Init_Flag == 0) && (Init_counter >= Init_max_count))
                     {
                         IO_Ports_Setting();
-                        //Debug_PIN_TX1 = 1;
                         //Get_Version_Firmware(buffer); 
                         //CAN_Encode_Sending(0x1B,0xC4, buffer, 6); //
                         //Init_Drill_State(); 
@@ -612,7 +625,6 @@ int main(void)
                 
                 ///////////////////////////////////////////////////
                 // TRansfer Xtall EXT to INT to EXT ...
-                //Debug_PIN_TX1 = !Debug_PIN_TX1;
                 Heartbeat_counter++; 
                 if(Heartbeat_counter >= Heartbeat_max_count)
                 {
@@ -654,7 +666,7 @@ int main(void)
 //                            {
 //                                Go_To_Sleep_counter = 0; 
 //                                Disabled_All_Sensors();
-//                                //Debug_PIN_TX1 = 1; 
+//
 //                                Go_To_Sleep(); 
 //                                //Xtal_Enable = 0; 
 //                            }
@@ -801,11 +813,8 @@ void IO_Ports_Setting(void)
 //    {
 //        Sleep_CTL = 0; 
 //    }
-//    Debug_PIN_TX1 = 0;
-//    while(Debug_PIN_TX1 != 0)
-//    {
-//        Debug_PIN_TX1 = 0; 
-//    }
+//    
+
     
 }
 /*******************************************************************************
@@ -833,7 +842,7 @@ void State_Machine_Reset(void)
  ******************************************************************************/
 void Init_Idle_State(void)
 {
-    //Debug_PIN_TX1 = 1;
+
     if(State_Flags.Idle_State != 1)
     {
         State_Machine_Reset(); 
@@ -956,9 +965,10 @@ void Init_Drill_State(void)
         
         //Write_1_reg_I2C(MAG_MMC5983_ID,0x0B,0x0E); // auto meas, 200Hz
         //Write_1_reg_I2C(MAG_MMC5983_ID,0x0B,0x0F); // auto meas, 1000Hz
-        buffer[0] = 0x0B;
-        buffer[1] = 0x0F; // auto meas, 1000Hz
-        MAG_MMC5983MA_Write_data_SPI(buffer, 2); 
+        //buffer[0] = 0x0B;
+        //buffer[1] = 0x0F; // auto meas, 1000Hz
+        //MAG_MMC5983MA_Write_data_SPI(buffer, 2); 
+        MAG_MMC5983MA_Set_Sampling_Continuous(); 
         
         
 //        buffer[0] = 0xBB;
@@ -995,7 +1005,7 @@ void Init_Drill_State(void)
  ******************************************************************************/
 void Disabled_All_Sensors(void)
 {
-    uint8_t buffer[3] = {0};
+    //uint8_t buffer[3] = {0};
     ////////////////////////////////////////////////////////////////////////////
     // Gyro power
 //    Gyro_Enable = 0; 
@@ -1042,9 +1052,10 @@ void Disabled_All_Sensors(void)
     ////////////////////////////////////////////////////////////////////////////
     // Magnetometer
     //Write_1_reg_I2C(MAG_MMC5983_ID,0x0B,0x00);// disable auto meas
-    buffer[0] = 0x0B;
-    buffer[1] = 0x00;
-    MAG_MMC5983MA_Write_data_SPI(buffer, 2); 
+    //buffer[0] = 0x0B;
+    //buffer[1] = 0x00;
+    //MAG_MMC5983MA_Write_data_SPI(buffer, 2); 
+    MAG_MMC5983MA_Disable_Sampling_Continuous();
     
     
 }
@@ -1264,11 +1275,11 @@ void Get_Voltage_3V3_5V(void)
 //            
 ////            if(voltage_formatted_5V > 5000)
 ////            {
-////                Debug_PIN_TX1 = 1;
+////               
 ////            }
 ////            else
 ////            {
-////                Debug_PIN_TX1 = 0;
+////                
 ////            }
 //            
 //            ADC_MCP3422_Sequencer++;
@@ -1296,8 +1307,8 @@ void Get_Voltage_3V3_5V(void)
  ******************************************************************************/
 void Voltage_5V_Level_Check(uint16_t volt5V)
 {
-    //Debug_PIN_TX1 = !Debug_PIN_TX1;
-    uint8_t buffer[5] = {0};
+    
+    //uint8_t buffer[5] = {0};
     Sum_Voltage_5V += volt5V; 
     
     Avg_Voltage_5V_Pointer++; 
@@ -1466,7 +1477,7 @@ void Voltage_5V_Level_Check(uint16_t volt5V)
 void Voltage_3V3_Level_Check(uint16_t volt3V3)
 {
 
-    uint8_t buffer[4] = {0};
+    //uint8_t buffer[4] = {0};
     
     Sum_Voltage_3V3 += volt3V3; 
     
@@ -1553,7 +1564,7 @@ void Voltage_3V3_Level_Check(uint16_t volt3V3)
         {
 //            if(Avg_Voltage_3V3 > BAT_3V3_VOLTAGE_OVERRIDED_THRESH)
 //            {
-//                //Debug_PIN_TX1 = 0;
+//                
 //                
 //                //// 7500 > voltage 3V3 > 4500
 //                if(Volt_3V3_Flags.Vol_3V3_Over_Sent == 0)
@@ -1608,7 +1619,7 @@ void Voltage_3V3_Level_Check(uint16_t volt3V3)
         {
 //            if (Avg_Voltage_3V3 > BAT_3V3_VOLTAGE_LOW_THRESH)
 //            {
-//                //Debug_PIN_TX1 = 1;
+//                
 //                //// 4500 > voltage 3V3 > 4500
 //                if(Volt_3V3_Flags.Vol_3V3_Normal_Sent == 0)
 //                {
@@ -1979,25 +1990,29 @@ void Save_Super_Burst(uint8_t *data)
  ******************************************************************************/
 void RTOS_50us_Routine_250Hz(void)
 {
-    uint8_t status = 0; 
+    //uint8_t status = 0; 
     uint8_t i;
     uint8_t buffer[16] = {0}; 
     //uint8_t tempo_buf[5] = {0}; 
     uint8_t cmd[1] = {0};
-    uint16_t tempo16; 
-    uint16_t voltage_formatted_3V3 = 0; 
-    uint16_t voltage_formatted_5V = 0;
+    //uint16_t tempo16; 
+    //uint16_t voltage_formatted_3V3 = 0; 
+    //uint16_t voltage_formatted_5V = 0;
     //uint32_t tempo32; 
     switch(RTOS_50us_Seguencer)
     {
         case RTOS_50us_Step_1ms:
             
-            //Debug_PIN_TX1 = 1;
+            
+            //
             switch (RTOS_50us_Counter)
             {
                 
                 ////////////////////////////////////////////////
                 case 0: // ADC Gyro - 100us
+                    //RTOS_Old_Value = Time.miliseconds; 
+                    Debug_PIN_TX1 = !Debug_PIN_TX1;
+                    //Debug_PIN_TX1 = 1;
                     Gyro_value = ADC_ADS868x_READ_DATA(SPI_CS_GYRO); 
 
                     break;
@@ -2006,7 +2021,7 @@ void RTOS_50us_Routine_250Hz(void)
                     // ~ 100 us
                     // 7 registers reading => 76us
                     // 25 registers reading => 256us
-                    //Debug_PIN_TX1 = 0;
+                    
                     ADXL373_SPI_Get_Data(cmd, 1, buffer, 6); 
                     ADXL373_SPI_Check_Level(buffer); 
                     ADXL373_Shift_Data(buffer,Accel_HG_Data); 
@@ -2050,13 +2065,26 @@ void RTOS_50us_Routine_250Hz(void)
                         }
                     }
                     break;
-
+                ////////////////////////////////////////////////    
+                case 4: // // Magnetometer - 100us
+                    MAG_MMC5983MA_Get_data_SPI(buffer, 6);
+                    for(i=0; i<6;i++)
+                    {
+                        Magneto_Data[i] = buffer[i]; 
+                    }
+                    break;
+                    
+                    break;
+                ////////////////////////////////////////////////        
             }
             RTOS_50us_Counter += 1; 
-            if(RTOS_50us_Counter >= 11) //
+            if(RTOS_50us_Counter >= 13) //
             {
-                //Debug_PIN_TX1 = !Debug_PIN_TX1;
                 //Debug_PIN_TX1 = 0;
+                //RTOS_New_Value = Time.miliseconds;
+                
+                //Time_Adjustment();
+                
                 RTOS_50us_Counter = 0; 
                 RTOS_50us_Seguencer += 1; 
             }
@@ -2065,12 +2093,14 @@ void RTOS_50us_Routine_250Hz(void)
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         case RTOS_50us_Step_2ms :
-            //Debug_PIN_TX1 = !Debug_PIN_TX1;
+            
             switch (RTOS_50us_Counter)
             {
                 ////////////////////////////////////////////////
                 case 0: // ADC Gyro - 100us
+                    //RTOS_Old_Value = Time.miliseconds;
                     //Debug_PIN_TX1 = 1;
+                    
                     Gyro_value = ADC_ADS868x_READ_DATA(SPI_CS_GYRO); 
 
                     break;
@@ -2096,21 +2126,21 @@ void RTOS_50us_Routine_250Hz(void)
                     break;
 
                 ///////////////////////////////////////////////
-                case 3: // Magnetometer - 100us
-                    MAG_MMC5983MA_Get_data_SPI(buffer, 6);
-                    for(i=0; i<6;i++)
-                    {
-                        Magneto_Data[i] = buffer[i]; 
-                    }
+                case 3: // 
+                    Calculation_TF(); // 480us
                     break;
 
                 ///////////////////////////////////////////////
 
             }
             RTOS_50us_Counter += 1; 
-            if(RTOS_50us_Counter >= 11)
+            if(RTOS_50us_Counter >= 6)
             {
                 //Debug_PIN_TX1 = 0;
+                //RTOS_New_Value = Time.miliseconds;
+                
+                //Time_Adjustment();
+                
                 RTOS_50us_Counter = 0;
                 RTOS_50us_Seguencer += 1; 
             }
@@ -2118,12 +2148,13 @@ void RTOS_50us_Routine_250Hz(void)
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         case RTOS_50us_Step_3ms:
-            //Debug_PIN_TX1 = !Debug_PIN_TX1;
+           
             switch (RTOS_50us_Counter)
             {
                 ////////////////////////////////////////////////
                 case 0: // ADC Gyro - 56us
-                    Debug_PIN_TX1 = 1;
+                    //RTOS_Old_Value = Time.miliseconds;
+                    //Debug_PIN_TX1 = 1;
                     Gyro_value = ADC_ADS868x_READ_DATA(SPI_CS_GYRO); 
 
                     break;
@@ -2141,13 +2172,18 @@ void RTOS_50us_Routine_250Hz(void)
                     if(State_Flags.Burst_State == 1 && State_Flags.Burst_Paused == 0)
                     {
                         Set_Burst_Writing();
-                        RTOS_50us_Counter = 15; // bypass delay
+                        RTOS_50us_Counter = 16; // bypass delay
                     }
                     else
                     {
-                        
-                        Calculation_TF(); 
-                        
+                        if(Drill_Pointer == 0)
+                        {
+                            Fill_Array_For_Writing(); 
+                            RTOS_50us_Counter = 16; // bypass delay
+                        }
+                        //Debug_PIN_TX1 = 1;
+                        //Calculation_TF(); // 480us
+                        //Debug_PIN_TX1 = 0;
                         if(State_Flags.Burst_Paused == 1)
                         {
                             Burst_Pause_Delay_counter++;
@@ -2161,10 +2197,13 @@ void RTOS_50us_Routine_250Hz(void)
 
             }
             RTOS_50us_Counter += 1; 
-            if(RTOS_50us_Counter >= 7)
+            if(RTOS_50us_Counter >= 16)
             {
-                //Debug_PIN_TX1 = !Debug_PIN_TX1;
-                Debug_PIN_TX1 = 0;
+                //Debug_PIN_TX1 = 0;
+                //RTOS_New_Value = Time.miliseconds;
+                
+                //Time_Adjustment();
+                
                 RTOS_50us_Counter = 0;
                 RTOS_50us_Seguencer += 1; 
             }
@@ -2172,11 +2211,13 @@ void RTOS_50us_Routine_250Hz(void)
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         case RTOS_50us_Step_4ms :
-            //Debug_PIN_TX1 = !Debug_PIN_TX1;
+            
             switch (RTOS_50us_Counter)
             {
                 ////////////////////////////////////////////////
                 case 0: // ADC Gyro - 100us
+                    //Debug_PIN_TX1 = 1;
+                    //RTOS_Old_Value = Time.miliseconds;
                     Gyro_value = ADC_ADS868x_READ_DATA(SPI_CS_GYRO); 
 
                     break;
@@ -2195,16 +2236,19 @@ void RTOS_50us_Routine_250Hz(void)
                     // 732us (SPI is 400us + 300us writing)
                     //Debug_PIN_TX1 = 1;
                     Fill_Array_For_Writing(); 
-                    //Debug_PIN_TX1 = 0;
+                    
                     break;
                 ///////////////////////////////////////////////
 
             }
             RTOS_50us_Counter += 1; 
-            if(RTOS_50us_Counter >= 15)
+            if(RTOS_50us_Counter >= 3)
             {
                 //Debug_PIN_TX1 = 0;
-                //Debug_PIN_TX1 = !Debug_PIN_TX1;
+                //RTOS_New_Value = Time.miliseconds;
+                
+                //Time_Adjustment();
+
                 RTOS_50us_Counter = 0;
                 RTOS_50us_Seguencer = 0; // reset
 
@@ -2213,7 +2257,11 @@ void RTOS_50us_Routine_250Hz(void)
             break;
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////    
-       
+
+            
+        ////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////
+           
         default:
             RTOS_50us_Counter = 0;
             RTOS_50us_Seguencer = 0; // reset
@@ -2236,8 +2284,8 @@ void RTOS_50us_Routine_125Hz(void)
     uint8_t cmd[1] = {0};
     uint16_t tempo16; 
     //uint16_t gyro_raw_value_Unsigned = 0; 
-    uint16_t voltage_formatted_3V3 = 0; 
-    uint16_t voltage_formatted_5V = 0;
+    //uint16_t voltage_formatted_3V3 = 0; 
+    //uint16_t voltage_formatted_5V = 0;
     
     //uint16_t gyro_Vol_Ref_Unsigned = 0 ; 
     //int16_t gyro_raw_value_Signed; 
@@ -3001,8 +3049,57 @@ void RTOS_50us_Routine_125Hz(void)
             break;
     }
 }
+
 /*******************************************************************************
  * Function: Test sensor
+ * Parameters: none
+ * Return: none
+ * Description: 
+ ******************************************************************************/
+void Time_Adjustment(void)
+{
+    uint8_t buffer[11];
+    //uint16_t time_cal = 1000 + RTOS_New_Value - RTOS_Old_Value - RTOS_Time_Over; 
+    uint16_t time_cal = 1000 + RTOS_New_Value - RTOS_Old_Value;  
+    
+    if(time_cal > 1010)
+    {
+        RTOS_Time_Over = 1000 - time_cal; 
+    }
+    else if(time_cal < 990)
+    {
+        RTOS_Time_Under = 1000 - time_cal; 
+        //Start_Timer_3(1000 - time_cal);
+        //while(Check_Timer_3() == 0){}; 
+        //Stop_Timer_3();
+    }
+    else
+    {
+        // less than 1% error, forget about it for debugging
+    }
+    
+    if(Time_debug_Flag == 1)
+    {
+        buffer[0] = 0xA2;
+        buffer[1] = RTOS_Old_Value>>8;
+        buffer[2] = RTOS_Old_Value & 0x00FF;
+        buffer[3] = RTOS_New_Value>>8;
+        buffer[4] = RTOS_New_Value & 0x00FF;
+        buffer[5] = time_cal>>8;
+        buffer[6] = time_cal & 0x00FF;
+        buffer[7] = RTOS_Time_Over>>8;
+        buffer[8] = RTOS_Time_Over & 0x00FF;
+        buffer[9] = RTOS_Time_Under>>8;
+        buffer[10] = RTOS_Time_Under & 0x00FF;
+        
+        CAN_Encode_Sending(0x1B,0xC4, buffer, 11);
+        Time_debug_Flag = 0; // display that values flag
+    }
+}
+
+
+/*******************************************************************************
+ * Function: Fill_Array_For_Writing
  * Parameters: none
  * Return: none
  * Description: 
@@ -3358,6 +3455,80 @@ void Fill_Array_For_Writing(void)
         // error
     }
     
+}
+/*******************************************************************************
+ * Function: 
+ * Parameters: none
+ * Return: none
+ * Description: 
+ ******************************************************************************/
+void Mag_Rotation_Det_Routine(uint8_t mag_data_MSB,uint8_t mag_data_LSB)
+{
+//    uint8_t i; 
+//    
+//    if(Mag_Rotation_Det_Flags.Reset == 0)
+//    {
+//        Mag_Rotation_Det_Reset(); 
+//    }
+//    
+//    Mag_Rotation_Det_Array[Mag_Rotation_Det_Array_Pointer++] = (mag_data_MSB << 8) | mag_data_LSB; 
+//    
+//    if(Mag_Rotation_Det_Array_Pointer > Mag_Rotation_Det_Number_Sample)
+//    {
+//        Mag_Rotation_Det_Array_Pointer = 0; 
+//        Mag_Rotation_Det_Flags.Array_Filled = 1; 
+//    }
+//    
+//    if(Mag_Rotation_Det_Flags.Array_Filled == 0)
+//    {
+//        return; 
+//    }
+//    
+//    
+//    if(Mag_Rotation_Det_Flags.Slope_Up_Search == 1)
+//    {
+//        for(i = 0; i < (Mag_Rotation_Det_Number_Sample - 1); i++)
+//        {
+//            if(Mag_Rotation_Det_Array[i] > 
+//        }
+//    }
+//    
+//    if(Mag_Rotation_Det_Flags.Slope_Down_Search == 1)
+//    {
+//
+//    }
+//    
+//    if(Mag_Rotation_Det_Flags.Peak_Search == 1)
+//    {
+//
+//    }
+
+}
+
+/*******************************************************************************
+ * Function: 
+ * Parameters: none
+ * Return: none
+ * Description: 
+ ******************************************************************************/
+void Mag_Rotation_Det_Reset(void)
+{
+    Mag_Rotation_Det_Timeout_Counter = 0;
+    Mag_Rotation_Det_Sample_UP_Counter = 0; 
+    Mag_Rotation_Det_Sample_Down_Counter = 0;
+    Mag_Rotation_Det_Peak_Counter = 0; 
+    
+    Mag_Rotation_Det_Flags.Reset = 1; 
+    Mag_Rotation_Det_Flags.Slope_Up_Search_Init = 1; 
+    Mag_Rotation_Det_Flags.Slope_Up_Search = 0; 
+    Mag_Rotation_Det_Flags.Slope_Down_Search_Init = 0; 
+    Mag_Rotation_Det_Flags.Slope_Down_Search = 0; 
+    Mag_Rotation_Det_Flags.Peak_Search_Init = 0; 
+    Mag_Rotation_Det_Flags.Peak_Search = 0; 
+    
+    Mag_Rotation_Det_Flags.Array_Filled = 0;
+    
+    Mag_Rotation_Det_Array_Pointer = 0;
 }
 
 /*******************************************************************************
@@ -4600,7 +4771,7 @@ void Read_Sensors(void)
 void Start_Timer_3(uint32_t microSec)
 {
     // tick is 200ns 
-    // shift by 2 == 800nS ~= 1us assuimg delay function
+    // shift by 2 == 800nS ~= 1us assuming delay function
     uint32_t tempo = microSec << 2; 
     CCP3PRH = (tempo & 0xFFFF0000) >> 16; 
     //CCP3PRH = 0; 
@@ -4702,7 +4873,7 @@ void __attribute__((__interrupt__,no_auto_psv)) _T1Interrupt(void)
 {
     Time.miliseconds += 1; 
      
-    if(Time.miliseconds >= 1000)
+    if(Time.miliseconds >= 5000)
     {
         Time.seconds += 1; 
         Time.miliseconds = 0; 

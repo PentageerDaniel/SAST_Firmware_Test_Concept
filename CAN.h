@@ -428,4 +428,6 @@ extern uint8_t ADXL373_SPI_Get_Register(uint8_t reg);
 #define	ACC373_RESET            0x41
 #define ACC373_FIFO_DATA        0x42
 
+////////////////////////////////////////////////////////////////////////////////
 
+extern uint8_t Time_debug_Flag; 

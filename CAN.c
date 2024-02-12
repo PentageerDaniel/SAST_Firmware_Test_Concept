@@ -507,7 +507,7 @@ void CAN_Decode_Received(void)
     int16_t gyro_value=0; 
     /////////////////////////////////////////////
     // debug magnetometer
-    uint32_t tempo_Mag;
+    //uint32_t tempo_Mag;
     /////////////////////////////////////////////
     //uint32_t addr = 0x0; 
     
@@ -1914,6 +1914,19 @@ void CAN_Decode_Received(void)
                 //buf_tempo[1] = (tempo16 & 0xFF00) >> 8; 
                 //buf_tempo[2] = tempo16 & 0x00FF;
                 CAN_Encode_Sending(0x1B,0xC4, buf_tempo, 1);
+                break;
+            ////////////////////////////////////////////////////////////////////
+                case 0xA1:
+                // Testing the time
+                // 0C 1B 1A C4 00 0C A1 00 00 00 5A 0D
+                // 00 01 02 03 04 05 06 07 08 09 10 11
+                    
+                //tempo16 = tempo16 << 3; 
+                Time_debug_Flag = 1; 
+                //buf_tempo[0] = 0xA2;
+                //buf_tempo[1] = (tempo16 & 0xFF00) >> 8; 
+                //buf_tempo[2] = tempo16 & 0x00FF;
+                //CAN_Encode_Sending(0x1B,0xC4, buf_tempo, 1);
                 break;
             ////////////////////////////////////////////////////////////////////
                 
